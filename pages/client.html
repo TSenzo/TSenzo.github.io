@@ -10,23 +10,33 @@
             'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-NBV65X5K');</script>
     <!-- End Google Tag Manager -->
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Espace Client - Gérer vos demandes et suivis de réparation.">
+    <meta property="og:title" content="Espace Client - Service de Réparation">
+    <meta property="og:description" content="Accédez à vos demandes et suivez l'avancement de vos réparations.">
+    <meta property="og:image" content="assets/images/logo.png">
+    <meta property="og:url" content="https://www.votresite.com/pages/client.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Espace Client - Service de Réparation">
+    <meta name="twitter:description" content="Accédez à vos demandes et suivez l'avancement de vos réparations.">
+    <meta name="twitter:image" content="assets/images/logo.png">
     <title>Espace Client - Service de Réparation</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBV65X5K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBV65X5K" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
     <header>
         <div class="container">
             <div class="logo">
-                <img src="assets/images/logo.png" alt="Service de Réparation Logo">
+                <img src="assets/images/logo.png" alt="Logo du Service de Réparation Informatique">
             </div>
             <nav>
                 <ul>
@@ -36,9 +46,9 @@
                     <li><a href="pages/booking.html">Réservation</a></li>
                     <li><a href="pages/client.html">Espace Client</a></li>
                     <li><a href="pages/blog.html">Blog</a></li>
-                    <li><a href="pages/privacy.html">Privacy</a></li>
-                    <li><a href="pages/submit-feedback.html">Submit Feedback</a></li>
-                    <li><a href="pages/terms.html">Terms</a></li>
+                    <li><a href="pages/privacy.html">Politique de Confidentialité</a></li>
+                    <li><a href="pages/submit-feedback.html">Soumettre un Feedback</a></li>
+                    <li><a href="pages/terms.html">Conditions Générales</a></li>
                 </ul>
             </nav>
         </div>
@@ -55,12 +65,12 @@
         <section class="client-dashboard">
             <div class="container">
                 <h2>Vos Demandes</h2>
-                <div class="client-request">
-                    <p><strong>Demande 1:</strong> Réparation de l'écran de votre ordinateur - Statut: En cours</p>
-                </div>
-                <div class="client-request">
-                    <p><strong>Demande 2:</strong> Installation de logiciel antivirus - Statut: Terminé</p>
-                </div>
+                <article class="client-request">
+                    <p><strong>Demande 1:</strong> Réparation de l'écran de votre ordinateur - <span class="status">En cours</span></p>
+                </article>
+                <article class="client-request">
+                    <p><strong>Demande 2:</strong> Installation de logiciel antivirus - <span class="status">Terminé</span></p>
+                </article>
                 <!-- Ajouter plus de demandes si nécessaire -->
             </div>
         </section>
@@ -76,6 +86,6 @@
         </div>
     </footer>
     
-    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/scripts.js" defer></script>
 </body>
 </html>

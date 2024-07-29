@@ -13,7 +13,8 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Page de Feedback - Soumettez vos commentaires et suggestions.">
+    <meta name="description" content="Page de Feedback - Soumettez vos commentaires et suggestions sur notre service de réparation informatique.">
+    <meta name="robots" content="index, follow">
     <title>Soumettre un Feedback - Service de Réparation</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -26,7 +27,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="../assets/images/logo.png" alt="Service de Réparation Logo">
+                <img src="../assets/images/logo.png" alt="Logo du Service de Réparation Informatique">
             </div>
             <nav>
                 <ul>
@@ -36,9 +37,9 @@
                     <li><a href="booking.html">Réservation</a></li>
                     <li><a href="client.html">Espace Client</a></li>
                     <li><a href="blogs.html">Blog</a></li>
-                    <li><a href="privacy.html">Privacy</a></li>
-                    <li><a href="submit-feedback.html">Submit Feedback</a></li>
-                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="privacy.html">Politique de Confidentialité</a></li>
+                    <li><a href="submit-feedback.html">Soumettre un Feedback</a></li>
+                    <li><a href="terms.html">Conditions Générales</a></li>
                 </ul>
             </nav>
         </div>
@@ -48,18 +49,24 @@
         <section class="feedback">
             <div class="container">
                 <h1>Soumettre un Feedback</h1>
-                <p>Nous apprécions vos commentaires et suggestions. Veuillez remplir le formulaire ci-dessous.</p>
-                <form action="submit-feedback.html" method="post">
-                    <label for="name">Nom :</label>
-                    <input type="text" id="name" name="name" required>
-
-                    <label for="email">Email :</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="message">Message :</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-
-                    <button type="submit" class="btn-main">Envoyer</button>
+                <p>Nous apprécions vos commentaires et suggestions. Veuillez remplir le formulaire ci-dessous pour nous faire part de vos retours.</p>
+                <form action="submit-feedback.html" method="post" aria-labelledby="feedbackForm">
+                    <fieldset>
+                        <legend id="feedbackForm">Formulaire de Feedback</legend>
+                        <div>
+                            <label for="name">Nom :</label>
+                            <input type="text" id="name" name="name" aria-required="true" required>
+                        </div>
+                        <div>
+                            <label for="email">Email :</label>
+                            <input type="email" id="email" name="email" aria-required="true" required>
+                        </div>
+                        <div>
+                            <label for="message">Message :</label>
+                            <textarea id="message" name="message" rows="5" aria-required="true" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-main">Envoyer</button>
+                    </fieldset>
                 </form>
             </div>
         </section>
@@ -74,5 +81,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="assets/js/scripts.js" defer></script>
 </body>
 </html>

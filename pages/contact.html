@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contactez notre service de réparation informatique.">
-    <title>Contact</title>
+    <meta name="description" content="Contactez notre service de réparation informatique pour toute question ou demande d'information.">
+    <meta name="robots" content="index, follow">
+    <title>Contact - Service de Réparation</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -12,7 +13,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="../assets/images/logo.png" alt="Service de Réparation Logo">
+                <img src="../assets/images/logo.png" alt="Logo du Service de Réparation Informatique">
             </div>
             <nav>
                 <ul>
@@ -23,33 +24,39 @@
             </nav>
         </div>
     </header>
+
     <main>
         <section class="contact">
             <div class="container">
                 <h1>Contactez-nous</h1>
-                <form action="#" method="post">
-                    <div>
-                        <label for="name">Nom:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div>
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-main">Envoyer</button>
+                <form action="#" method="post" aria-labelledby="contactForm">
+                    <fieldset>
+                        <legend id="contactForm">Formulaire de Contact</legend>
+                        <div>
+                            <label for="name">Nom:</label>
+                            <input type="text" id="name" name="name" aria-required="true" required>
+                        </div>
+                        <div>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" aria-required="true" required>
+                        </div>
+                        <div>
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" aria-required="true" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-main">Envoyer</button>
+                    </fieldset>
                 </form>
             </div>
         </section>
     </main>
+
     <footer>
         <div class="container">
             <p>&copy; 2024 Service de Réparation. Tous droits réservés.</p>
         </div>
     </footer>
-    <script src="../assets/js/scripts.js"></script>
+
+    <script src="../assets/js/scripts.js" defer></script>
 </body>
 </html>
