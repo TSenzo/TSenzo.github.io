@@ -1,60 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-NBV65X5K');</script>
-    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez notre service de réparation informatique pour toute question ou assistance.">
     <title>Contact - Service de Réparation</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBV65X5K"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <header>
         <div class="container">
-            <h1>Service de Réparation</h1>
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Service de Réparation Logo">
+            </div>
             <nav>
                 <ul>
-                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="index.html">Accueil</a></li>
                     <li><a href="about.html">À Propos</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="booking.html">Réservation</a></li>
+                    <li><a href="client.html">Espace Client</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <div class="container">
-        <main>
-            <h2>Contactez-Nous</h2>
-            <form>
-                <label for="name">Nom :</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message :</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Envoyer</button>
-            </form>
-        </main>
-    </div>
+    
+    <main>
+        <section class="contact">
+            <div class="container">
+                <h1>Contactez-Nous</h1>
+                <p>Pour toute question ou demande, veuillez remplir le formulaire ci-dessous. Nous vous répondrons dans les plus brefs délais.</p>
+                
+                <form action="submit_form.php" method="post">
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    
+                    <button type="submit" class="btn-main">Envoyer</button>
+                </form>
+                
+                <div class="contact-info">
+                    <h2>Informations de Contact</h2>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Rue de la Réparation, Paris, France</p>
+                    <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                    <p><i class="fas fa-envelope"></i> contact@service-reparation.fr</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
     <footer>
-        <p>&copy; 2024 Service de Réparation</p>
+        <div class="container">
+            <p>&copy; 2024 Service de Réparation. Tous droits réservés.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Politique de Confidentialité</a> |
+                <a href="terms.html">Conditions Générales</a>
+            </div>
+        </div>
     </footer>
+    
+    <script src="assets/js/scripts.js"></script>
 </body>
 
 </html>
