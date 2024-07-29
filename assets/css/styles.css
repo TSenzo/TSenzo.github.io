@@ -5,6 +5,7 @@ body {
     padding: 0;
     color: #333;
     background-color: #f4f4f4;
+    line-height: 1.6;
 }
 
 .container {
@@ -59,12 +60,14 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin: 0;
+    animation: fadeInDown 1s;
 }
 
 .hero p {
     font-size: 1.2rem;
+    animation: fadeInUp 1s;
 }
 
 .btn-main {
@@ -74,6 +77,9 @@ nav ul li a:hover {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+    animation: fadeIn 1.5s;
 }
 
 .btn-main:hover {
@@ -89,6 +95,7 @@ nav ul li a:hover {
 .services h2 {
     text-align: center;
     margin-bottom: 20px;
+    font-size: 2.5rem;
 }
 
 .service-list {
@@ -105,9 +112,108 @@ nav ul li a:hover {
     width: 30%;
     margin: 10px;
     text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.service-item i {
+    font-size: 3rem;
+    color: #ff5722;
+    margin-bottom: 10px;
 }
 
 .service-item h3 {
+    margin-top: 0;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 20px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.testimonial-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.testimonial-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.testimonial-item p {
+    font-style: italic;
+}
+
+.testimonial-item h4 {
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+/* Why Us */
+.why-us {
+    padding: 20px 0;
+    background-color: #fff;
+}
+
+.why-us h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.why-us-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.why-us-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.why-us-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.why-us-item i {
+    font-size: 3rem;
+    color: #ff5722;
+    margin-bottom: 10px;
+}
+
+.why-us-item h3 {
     margin-top: 0;
 }
 
@@ -117,57 +223,45 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
-/* Section Support */
-.support {
-    padding: 40px 0;
-    background-color: #fff;
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-.support h2 {
-    text-align: center;
-    margin-bottom: 20px;
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.support-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.chat, .knowledge-base {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 45%;
-    margin: 10px;
-    text-align: center;
-}
-
-.chat h2, .knowledge-base h2 {
-    margin-top: 0;
-}
-
-.faq ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.faq ul li {
-    margin: 10px 0;
-}
-
-.faq ul li a {
-    color: #ff5722;
-    text-decoration: none;
-}
-
-.faq ul li a:hover {
-    text-decoration: underline;
+/* Media Queries */
+@media (max-width: 768px) {
+    .service-item,
+    .testimonial-item,
+    .why-us-item {
+        width: 100%;
+    }
 }
