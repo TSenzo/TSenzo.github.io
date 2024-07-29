@@ -8,13 +8,6 @@ body {
     line-height: 1.6;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-}
-
 /* En-tête */
 header {
     background-color: #333;
@@ -86,6 +79,50 @@ nav ul li a:hover {
     background-color: #e64a19;
 }
 
+/* Témoignages */
+.testimonials {
+    padding: 20px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.testimonial-carousel {
+    display: flex;
+    overflow: auto;
+    gap: 10px;
+    padding: 10px;
+}
+
+.testimonial-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.testimonial-item p {
+    font-style: italic;
+}
+
+.testimonial-item h4 {
+    margin-top: 10px;
+    font-weight: normal;
+}
+
 /* Services */
 .services {
     padding: 20px 0;
@@ -100,8 +137,9 @@ nav ul li a:hover {
 
 .service-list {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .service-item {
@@ -109,7 +147,7 @@ nav ul li a:hover {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 30%;
+    width: 250px;
     margin: 10px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -130,91 +168,25 @@ nav ul li a:hover {
     margin-top: 0;
 }
 
-/* Testimonials */
-.testimonials {
-    padding: 20px 0;
-    background-color: #f4f4f4;
-    text-align: center;
-}
-
-.testimonials h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.testimonial-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.testimonial-item {
-    background-color: #fff;
+/* Call to Action */
+.cta {
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 30%;
-    margin: 10px;
+    background-color: #ff5722;
+    color: #fff;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.testimonial-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+.cta h2 {
+    margin: 0;
+    font-size: 2rem;
 }
 
-.testimonial-item p {
-    font-style: italic;
+.cta p {
+    font-size: 1.2rem;
 }
 
-.testimonial-item h4 {
+.cta .btn-main {
     margin-top: 10px;
-    font-weight: normal;
-}
-
-/* Why Us */
-.why-us {
-    padding: 20px 0;
-    background-color: #fff;
-}
-
-.why-us h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2.5rem;
-}
-
-.why-us-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.why-us-item {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 30%;
-    margin: 10px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.why-us-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.why-us-item i {
-    font-size: 3rem;
-    color: #ff5722;
-    margin-bottom: 10px;
-}
-
-.why-us-item h3 {
-    margin-top: 0;
 }
 
 /* Pied de page */
@@ -259,9 +231,22 @@ footer {
 
 /* Media Queries */
 @media (max-width: 768px) {
-    .service-item,
-    .testimonial-item,
-    .why-us-item {
-        width: 100%;
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
     }
 }
+

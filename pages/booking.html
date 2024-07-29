@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Réservez une réparation ou une consultation en ligne avec notre service de réparation informatique.">
+    <title>Réservation en Ligne - Service de Réparation</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="../index.html" class="logo"><img src="../assets/images/logo.png" alt="Service de Réparation Logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="about.html">À Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="booking.html">Réservation</a></li>
+                    <li><a href="client.html">Espace Client</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Réservez une Réparation ou une Consultation</h1>
+            <form action="/submit-booking" method="POST">
+                <label for="service">Choisissez le Service :</label>
+                <select id="service" name="service" required>
+                    <option value="hardware">Réparation de Matériel</option>
+                    <option value="software">Assistance Logicielle</option>
+                    <option value="security">Protection Informatique</option>
+                    <option value="consultation">Consultation Personnalisée</option>
+                </select>
+
+                <label for="date">Date :</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Heure :</label>
+                <input type="time" id="time" name="time" required>
+
+                <label for="details">Détails Supplémentaires :</label>
+                <textarea id="details" name="details"></textarea>
+
+                <button type="submit" class="btn-main">Réserver</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Service de Réparation. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>

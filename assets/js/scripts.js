@@ -2,8 +2,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Page chargée et prête.');
 
-    // Exemple d'animation au scroll
-    const items = document.querySelectorAll('.service-item, .testimonial-item, .why-us-item');
+    // Animation au scroll pour les éléments visibles
+    const items = document.querySelectorAll('.service-item, .testimonial-item');
 
     function isInViewport(element) {
         const rect = element.getBoundingClientRect();
