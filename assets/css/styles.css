@@ -8,278 +8,238 @@ body {
     line-height: 1.6;
 }
 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
 /* En-tête */
 header {
-    background-color: #333;
+    background: #333;
     color: #fff;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 1em 0;
 }
 
 header .logo img {
-    height: 50px;
+    width: 150px;
 }
 
-nav ul {
+header nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
+    justify-content: flex-end;
 }
 
-nav ul li {
-    margin: 0 15px;
+header nav ul li {
+    margin-left: 20px;
 }
 
-nav ul li a {
+header nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    padding: 10px;
+    transition: background 0.3s ease;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+header nav ul li a:hover {
+    background: #555;
+    border-radius: 5px;
 }
 
-/* Section Héros */
+/* Section Hero */
 .hero {
-    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
     color: #fff;
+    padding: 100px 0;
     text-align: center;
-    padding: 100px 20px;
-    margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3em;
     margin: 0;
-    animation: fadeInDown 1s;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    animation: fadeInUp 1s;
+    font-size: 1.2em;
 }
 
 .btn-main {
-    background-color: #ff5722;
+    background: #007BFF;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    display: inline-block;
-    margin-top: 20px;
-    animation: fadeIn 1.5s;
 }
 
 .btn-main:hover {
-    background-color: #e64a19;
+    background: #0056b3;
 }
 
-/* Services */
+/* Section Services */
 .services {
-    padding: 20px 0;
-    background-color: #fff;
+    background: #fff;
+    padding: 50px 0;
 }
 
 .services h2 {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 2.5rem;
 }
 
 .service-list {
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
 }
 
 .service-item {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 250px;
-    margin: 10px;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.service-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.service-item i {
-    font-size: 3rem;
-    color: #ff5722;
-    margin-bottom: 10px;
-}
-
-.service-item h3 {
-    margin-top: 0;
-}
-
-/* Témoignages */
-.testimonials {
-    padding: 20px 0;
-    background-color: #f4f4f4;
-    text-align: center;
-}
-
-.testimonials h2 {
-    font-size: 2.5rem;
+    width: 30%;
     margin-bottom: 20px;
 }
 
-.testimonial-list {
+.service-item i {
+    font-size: 2em;
+    color: #007BFF;
+}
+
+.service-item h3 {
+    margin: 10px 0;
+}
+
+/* Section Testimonials */
+.testimonials {
+    background: #f4f4f4;
+    padding: 50px 0;
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.testimonial-carousel {
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
 }
 
 .testimonial-item {
-    background-color: #fff;
+    background: #fff;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 300px;
-    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 30%;
+    margin-bottom: 20px;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.testimonial-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .testimonial-item p {
     font-style: italic;
 }
 
-.testimonial-item h4 {
-    margin-top: 10px;
-    font-weight: normal;
-}
-
-/* Why Us */
+/* Section Why Us */
 .why-us {
-    padding: 20px 0;
-    background-color: #fff;
+    background: #fff;
+    padding: 50px 0;
 }
 
 .why-us h2 {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 2.5rem;
 }
 
 .why-us-list {
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
 }
 
 .why-us-item {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 250px;
-    margin: 10px;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.why-us-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    width: 30%;
+    margin-bottom: 20px;
 }
 
 .why-us-item i {
-    font-size: 3rem;
-    color: #ff5722;
-    margin-bottom: 10px;
+    font-size: 2em;
+    color: #007BFF;
 }
 
 .why-us-item h3 {
-    margin-top: 0;
+    margin: 10px 0;
+}
+
+/* Section Contact */
+.contact {
+    background: #fff;
+    padding: 50px 0;
+}
+
+.contact h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact form div {
+    margin-bottom: 15px;
+}
+
+.contact form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact form button {
+    background: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact form button:hover {
+    background: #0056b3;
 }
 
 /* Pied de page */
 footer {
-    background-color: #333;
+    background: #333;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    padding: 20px 0;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
-    header {
+    header nav ul {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .service-list, .testimonial-list, .why-us-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-item, .testimonial-item, .why-us-item {
+    .service-item,
+    .why-us-item,
+    .testimonial-item {
         width: 100%;
-        max-width: 400px;
+        margin: 10px 0;
     }
 }
