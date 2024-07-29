@@ -12,15 +12,17 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 20px;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    position: relative;
 }
 
 header .logo img {
-    height: 50px;
+    height: 60px;
 }
 
 nav ul {
@@ -31,19 +33,20 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s;
 }
 
 nav ul li a:hover {
     color: #ff5722;
     text-decoration: underline;
+    transform: scale(1.05);
 }
 
 /* Section Héros */
@@ -51,9 +54,14 @@ nav ul li a:hover {
     background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
     color: #fff;
     text-align: center;
-    padding: 120px 20px;
-    margin-bottom: 20px;
+    padding: 150px 20px;
+    margin-bottom: 30px;
     position: relative;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
 }
 
 .hero::before {
@@ -68,7 +76,7 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     margin: 0;
     animation: fadeInDown 1s ease-out;
     position: relative;
@@ -76,7 +84,7 @@ nav ul li a:hover {
 }
 
 .hero p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     animation: fadeInUp 1s ease-out;
     position: relative;
     z-index: 2;
@@ -85,54 +93,57 @@ nav ul li a:hover {
 .btn-main {
     background-color: #ff5722;
     color: #fff;
-    padding: 12px 25px;
+    padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     display: inline-block;
     margin-top: 20px;
     transition: background-color 0.3s, transform 0.3s;
-    animation: fadeIn 1.5s ease-out;
+    position: relative;
+    z-index: 2;
 }
 
 .btn-main:hover {
     background-color: #e64a19;
-    transform: translateY(-3px);
+    transform: scale(1.05);
 }
 
 /* Témoignages */
 .testimonials {
     padding: 40px 20px;
-    background-color: #f4f4f4;
+    background-color: #fff;
     text-align: center;
 }
 
 .testimonials h2 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
+    font-size: 3rem;
+    margin-bottom: 30px;
     color: #333;
 }
 
 .testimonial-carousel {
     display: flex;
-    overflow-x: auto;
+    overflow: auto;
     gap: 20px;
-    padding: 20px 0;
+    padding: 10px;
+    scroll-snap-type: x mandatory;
 }
 
 .testimonial-item {
     background-color: #fff;
-    padding: 25px;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 280px;
+    width: 300px;
     margin: 10px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    scroll-snap-align: center;
 }
 
 .testimonial-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
     box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
@@ -155,7 +166,7 @@ nav ul li a:hover {
 
 .services h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-size: 2.8rem;
     color: #333;
 }
@@ -214,6 +225,65 @@ nav ul li a:hover {
     margin-bottom: 15px;
 }
 
+/* Blog */
+.blog {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.blog h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.blog-post {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.blog-post img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.blog-content {
+    padding: 10px 0;
+}
+
+.blog-content h3 a {
+    text-decoration: none;
+    color: #ff5722;
+    font-size: 1.4rem;
+    transition: color 0.3s;
+}
+
+.blog-content h3 a:hover {
+    color: #e64a19;
+}
+
+.blog-content p {
+    font-size: 1rem;
+    color: #666;
+}
+
 /* Pied de page */
 footer {
     background-color: #333;
@@ -221,6 +291,16 @@ footer {
     text-align: center;
     padding: 15px 20px;
     font-size: 0.9rem;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
 }
 
 /* Animations */
@@ -268,7 +348,7 @@ footer {
     }
 
     .hero {
-        padding: 80px 20px;
+        padding: 100px 20px;
     }
 
     .hero h1 {
@@ -276,7 +356,7 @@ footer {
     }
 
     .hero p {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     .service-list {
@@ -285,6 +365,11 @@ footer {
     }
 
     .service-item {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .blog-post {
         width: 100%;
         max-width: 400px;
     }
