@@ -1,7 +1,6 @@
 /* Général */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
@@ -9,28 +8,35 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     margin: auto;
-    overflow: hidden;
+    padding: 20px;
 }
 
 /* En-tête */
 header {
-    background: #333;
+    background-color: #333;
     color: #fff;
     padding: 10px 0;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
 }
 
 nav ul {
+    list-style: none;
     padding: 0;
     margin: 0;
-    list-style: none;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -43,41 +49,71 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Principal */
-main {
-    padding: 20px 0;
-}
-
-.cta {
-    background: #e2e2e2;
-    padding: 20px;
+/* Section Héros */
+.hero {
+    background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
     text-align: center;
-    margin: 20px 0;
+    padding: 100px 20px;
+    margin-bottom: 20px;
 }
 
-.cta h3 {
-    margin: 0 0 10px;
+.hero h1 {
+    font-size: 2.5rem;
+    margin: 0;
 }
 
-.cta p {
-    margin: 0 0 20px;
+.hero p {
+    font-size: 1.2rem;
 }
 
-.btn {
-    background: #333;
+.btn-main {
+    background-color: #ff5722;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: bold;
 }
 
-.btn:hover {
-    background: #555;
+.btn-main:hover {
+    background-color: #e64a19;
+}
+
+/* Services */
+.services {
+    padding: 20px 0;
+    background-color: #fff;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+}
+
+.service-item h3 {
+    margin-top: 0;
 }
 
 /* Pied de page */
 footer {
-    background: #333;
+    background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px 0;
