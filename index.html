@@ -3,54 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assistance Informatique</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Service de Réparation Informatique - Assistance et réparation de votre matériel informatique.">
+    <title>Service de Réparation</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
     <header>
-        <nav>
-            <a href="#home">Accueil</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <div class="container">
+            <h1>Service de Réparation</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="pages/about.html">À Propos</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    
-    <section id="home">
-        <h1>Réparation et Assistance Informatique de Qualité</h1>
-        <p>Nos experts sont prêts à vous aider.</p>
-        <a href="#contact" class="cta-button">Contactez-nous</a>
-    </section>
-    
-    <section id="services">
-        <h2>Nos Services</h2>
-        <div class="service">
-            <h3>Réparation PC</h3>
-            <p>Description du service de réparation PC.</p>
-        </div>
-        <div class="service">
-            <h3>Assistance Logicielle</h3>
-            <p>Description du service d’assistance logicielle.</p>
-        </div>
-        <!-- Ajoutez d'autres services si nécessaire -->
-    </section>
-    
-    <section id="contact">
-        <h2>Contactez-nous</h2>
-        <form id="contact-form">
-            <label for="name">Nom :</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email :</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message :</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Envoyer</button>
-        </form>
-    </section>
-    
+    <div class="container">
+        <main>
+            <h2>Bienvenue sur notre site</h2>
+            <p>Nous offrons des services de réparation informatique de haute qualité. Que ce soit pour un problème logiciel ou matériel, notre équipe d'experts est là pour vous aider.</p>
+            
+            <!-- Section d'Appel à l'Action -->
+            <section class="cta">
+                <h3>Vous avez un problème ?</h3>
+                <p>Contactez-nous dès aujourd'hui pour un diagnostic gratuit.</p>
+                <a href="pages/contact.html" class="btn">Nous Contacter</a>
+            </section>
+        </main>
+    </div>
     <footer>
-        <p>&copy; 2024 Assistance Informatique. Tous droits réservés.</p>
+        <div class="container">
+            <p>&copy; 2024 Service de Réparation. Tous droits réservés.</p>
+        </div>
     </footer>
-    
-    <script src="script.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </body>
 </html>
