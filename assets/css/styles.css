@@ -8,6 +8,14 @@ body {
     line-height: 1.6;
 }
 
+/* Conteneur Principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 /* En-tête */
 header {
     background-color: #333;
@@ -16,11 +24,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 header .logo img {
-    height: 60px;
+    height: 50px;
 }
 
 nav ul {
@@ -38,11 +46,10 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ff5722;
+    text-decoration: underline;
 }
 
 /* Section Héros */
@@ -50,64 +57,64 @@ nav ul li a:hover {
     background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
     color: #fff;
     text-align: center;
-    padding: 120px 20px;
+    padding: 100px 20px;
     margin-bottom: 20px;
+    border-bottom: 2px solid #ff5722;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin: 0;
     animation: fadeInDown 1s;
 }
 
 .hero p {
-    font-size: 1.5rem;
-    margin: 10px 0;
+    font-size: 1.2rem;
     animation: fadeInUp 1s;
 }
 
 .btn-main {
     background-color: #ff5722;
     color: #fff;
-    padding: 12px 25px;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     display: inline-block;
     margin-top: 20px;
-    transition: background-color 0.3s, transform 0.3s;
     animation: fadeIn 1.5s;
 }
 
 .btn-main:hover {
     background-color: #e64a19;
-    transform: scale(1.05);
 }
 
 /* Témoignages */
 .testimonials {
-    padding: 40px 0;
-    background-color: #f4f4f4;
+    padding: 20px 0;
+    background-color: #fff;
     text-align: center;
+    border-bottom: 2px solid #ff5722;
 }
 
 .testimonials h2 {
     font-size: 2.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .testimonial-carousel {
     display: flex;
     overflow: auto;
-    gap: 20px;
-    padding: 0 10px;
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
 }
 
 .testimonial-item {
     background-color: #fff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
     width: 300px;
     margin: 10px;
     text-align: center;
@@ -116,7 +123,7 @@ nav ul li a:hover {
 
 .testimonial-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .testimonial-item p {
@@ -130,13 +137,13 @@ nav ul li a:hover {
 
 /* Services */
 .services {
-    padding: 40px 20px;
+    padding: 20px 0;
     background-color: #fff;
 }
 
 .services h2 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 2.5rem;
 }
 
@@ -149,10 +156,10 @@ nav ul li a:hover {
 
 .service-item {
     background-color: #f9f9f9;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 270px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 250px;
     margin: 10px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -160,13 +167,13 @@ nav ul li a:hover {
 
 .service-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .service-item i {
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: #ff5722;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .service-item h3 {
@@ -175,23 +182,24 @@ nav ul li a:hover {
 
 /* Call to Action */
 .cta {
-    padding: 40px 20px;
+    padding: 20px;
     background-color: #ff5722;
     color: #fff;
     text-align: center;
+    border-radius: 5px;
 }
 
 .cta h2 {
     margin: 0;
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 
 .cta p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .cta .btn-main {
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 /* Pied de page */
@@ -199,30 +207,75 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 15px 20px;
+    padding: 10px 0;
+    border-top: 2px solid #ff5722;
 }
 
-/* Tables */
-.table {
-    width: 100%;
-    border-collapse: collapse;
+/* Formulaires */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.table th, .table td {
-    padding: 12px;
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
     border: 1px solid #ddd;
-    text-align: left;
+    border-radius: 5px;
 }
 
-.table th {
-    background-color: #f4f4f4;
+form button {
+    align-self: flex-start;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff5722;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.table tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+form button:hover {
+    background-color: #e64a19;
 }
 
-/* Responsivité */
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -231,30 +284,18 @@ footer {
 
     nav ul {
         flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .hero {
-        padding: 80px 20px;
+        gap: 10px;
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .hero p {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
-    .testimonials, .services, .cta {
-        padding: 20px;
-    }
-
-    .service-item, .testimonial-item {
+    .service-item {
         width: 100%;
     }
 }
