@@ -13,8 +13,8 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Réservez votre réparation en ligne avec notre service.">
-    <title>Accueil - Service de Réparation</title>
+    <meta name="description" content="Service de Réparation Informatique - Assistance et réparation de votre matériel informatique.">
+    <title>Service de Réparation</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -33,12 +33,6 @@
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="pages/about.html">À Propos</a></li>
                     <li><a href="pages/contact.html">Contact</a></li>
-                    <li><a href="pages/booking.html">Réservation</a></li>
-                    <li><a href="pages/client.html">Espace Client</a></li>
-                    <li><a href="pages/blog.html">Blog</a></li>
-                    <li><a href="pages/privacy.html">Privacy</a></li>
-                    <li><a href="pages/submit-feedback.html">Submit Feedback</a></li>
-                    <li><a href="pages/terms.html">Terms</a></li>
                 </ul>
             </nav>
         </div>
@@ -47,51 +41,85 @@
     <main>
         <section class="hero">
             <div class="container">
-                <img src="assets/images/hero-image.jpg" alt="Réparation Informatique">
-                <h1>Réservez Votre Réparation</h1>
-                <p>Choisissez une date et une heure pour votre réparation ou assistance.</p>
+                <h1>Réparation Informatique de Qualité</h1>
+                <p>Nous réparons vos ordinateurs et périphériques avec un service rapide et fiable.</p>
+                <a href="pages/contact.html" class="btn-main">Contactez-nous</a>
             </div>
         </section>
-        
-        <section class="booking-form">
+
+        <section class="services">
             <div class="container">
-                <form action="booking_confirmation.html" method="post">
-                    <label for="name">Nom:</label>
-                    <input type="text" id="name" name="name" required>
+                <h2>Nos Services</h2>
+                <div class="service-list">
+                    <div class="service-item">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Réparation Ordinateur</h3>
+                        <p>Diagnostic et réparation de matériel informatique.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-tools"></i>
+                        <h3>Assistance Logicielle</h3>
+                        <p>Résolution de problèmes logiciels et optimisation.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Maintenance Préventive</h3>
+                        <p>Services de maintenance pour éviter les pannes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+        <section class="testimonials">
+            <div class="container">
+                <h2>Ce que disent nos clients</h2>
+                <div class="testimonial-list">
+                    <div class="testimonial-item">
+                        <p>"Service incroyable! Mon ordinateur fonctionne comme neuf."</p>
+                        <h4>- Jean Dupont</h4>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"Assistance rapide et efficace. Je recommande vivement!"</p>
+                        <h4>- Marie Claire</h4>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"Professionnels et sympathiques. Très satisfait du service."</p>
+                        <h4>- Pierre Martin</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <label for="service">Service:</label>
-                    <select id="service" name="service" required>
-                        <option value="repair">Réparation de Matériel</option>
-                        <option value="software">Assistance Logicielle</option>
-                        <option value="protection">Protection Informatique</option>
-                        <option value="consultation">Consultation Personnalisée</option>
-                    </select>
-
-                    <label for="date">Date:</label>
-                    <input type="date" id="date" name="date" required>
-
-                    <label for="time">Heure:</label>
-                    <input type="time" id="time" name="time" required>
-
-                    <button type="submit" class="btn-main">Réserver</button>
-                </form>
+        <section class="why-us">
+            <div class="container">
+                <h2>Pourquoi nous choisir?</h2>
+                <div class="why-us-list">
+                    <div class="why-us-item">
+                        <i class="fas fa-clock"></i>
+                        <h3>Rapidité</h3>
+                        <p>Nous garantissons une réparation rapide et efficace.</p>
+                    </div>
+                    <div class="why-us-item">
+                        <i class="fas fa-thumbs-up"></i>
+                        <h3>Fiabilité</h3>
+                        <p>Nos experts sont certifiés et expérimentés.</p>
+                    </div>
+                    <div class="why-us-item">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h3>Prix Compétitifs</h3>
+                        <p>Des services de qualité à des prix abordables.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    
+
     <footer>
         <div class="container">
             <p>&copy; 2024 Service de Réparation. Tous droits réservés.</p>
-            <div class="footer-links">
-                <a href="pages/privacy.html">Politique de Confidentialité</a> | 
-                <a href="pages/terms.html">Conditions Générales</a>
-            </div>
         </div>
     </footer>
-    
+
     <script src="assets/js/scripts.js"></script>
 </body>
 </html>
