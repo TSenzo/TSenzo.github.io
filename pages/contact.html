@@ -4,12 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contactez notre service de réparation informatique pour toute question ou assistance.">
+    <meta name="description" content="Contactez-nous pour toute question ou demande de service. Nous sommes là pour vous aider.">
     <title>Contact - Service de Réparation</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start': new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NBV65X5K');</script>
+    <!-- End Google Tag Manager -->
+
     <header>
         <div class="container">
             <div class="logo">
@@ -22,40 +33,39 @@
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="booking.html">Réservation</a></li>
                     <li><a href="client.html">Espace Client</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    
+
     <main>
         <section class="contact">
             <div class="container">
                 <h1>Contactez-Nous</h1>
-                <p>Pour toute question ou demande, veuillez remplir le formulaire ci-dessous. Nous vous répondrons dans les plus brefs délais.</p>
-                
-                <form action="submit_form.php" method="post">
+                <p>Pour toute question ou demande, n'hésitez pas à nous contacter via le formulaire ci-dessous ou par téléphone.</p>
+                <form action="submit_contact.php" method="post">
                     <label for="name">Nom :</label>
                     <input type="text" id="name" name="name" required>
-                    
+
                     <label for="email">Email :</label>
                     <input type="email" id="email" name="email" required>
-                    
+
                     <label for="message">Message :</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
-                    
+
                     <button type="submit" class="btn-main">Envoyer</button>
                 </form>
-                
                 <div class="contact-info">
-                    <h2>Informations de Contact</h2>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Rue de la Réparation, Paris, France</p>
-                    <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
-                    <p><i class="fas fa-envelope"></i> contact@service-reparation.fr</p>
+                    <h2>Nos Coordonnées</h2>
+                    <p><strong>Téléphone :</strong> +33 1 23 45 67 89</p>
+                    <p><strong>Email :</strong> contact@service-reparation.com</p>
+                    <p><strong>Adresse :</strong> 123 Rue de la Technologie, 75001 Paris, France</p>
                 </div>
             </div>
         </section>
     </main>
-    
+
     <footer>
         <div class="container">
             <p>&copy; 2024 Service de Réparation. Tous droits réservés.</p>
@@ -65,7 +75,7 @@
             </div>
         </div>
     </footer>
-    
+
     <script src="assets/js/scripts.js"></script>
 </body>
 

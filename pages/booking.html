@@ -4,12 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Réservez votre service de réparation informatique en ligne.">
+    <meta name="description" content="Réservez en ligne pour une réparation ou une consultation personnalisée.">
     <title>Réservation - Service de Réparation</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start': new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NBV65X5K');</script>
+    <!-- End Google Tag Manager -->
+
     <header>
         <div class="container">
             <div class="logo">
@@ -22,52 +33,43 @@
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="booking.html">Réservation</a></li>
                     <li><a href="client.html">Espace Client</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    
+
     <main>
         <section class="booking">
             <div class="container">
                 <h1>Réservez un Service</h1>
-                <p>Choisissez le service dont vous avez besoin et sélectionnez une date et une heure pour votre réservation.</p>
-                
+                <p>Pour réserver un service ou une consultation, veuillez remplir le formulaire ci-dessous.</p>
                 <form action="submit_booking.php" method="post">
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Téléphone :</label>
+                    <input type="tel" id="phone" name="phone" required>
+
                     <label for="service">Service :</label>
                     <select id="service" name="service" required>
-                        <option value="repair">Réparation de Matériel</option>
-                        <option value="software">Assistance Logicielle</option>
-                        <option value="protection">Protection Informatique</option>
-                        <option value="consultation">Consultation Personnalisée</option>
+                        <option value="">Sélectionnez un service</option>
+                        <option value="reparation">Réparation</option>
+                        <option value="consultation">Consultation</option>
                     </select>
-                    
-                    <label for="date">Date :</label>
+
+                    <label for="date">Date souhaitée :</label>
                     <input type="date" id="date" name="date" required>
-                    
-                    <label for="time">Heure :</label>
-                    <input type="time" id="time" name="time" required>
-                    
-                    <label for="notes">Commentaires :</label>
-                    <textarea id="notes" name="notes" rows="5"></textarea>
-                    
+
                     <button type="submit" class="btn-main">Réserver</button>
                 </form>
             </div>
         </section>
     </main>
-    
+
     <footer>
         <div class="container">
-            <p>&copy; 2024 Service de Réparation. Tous droits réservés.</p>
-            <div class="footer-links">
-                <a href="privacy.html">Politique de Confidentialité</a> |
-                <a href="terms.html">Conditions Générales</a>
-            </div>
-        </div>
-    </footer>
-    
-    <script src="assets/js/scripts.js"></script>
-</body>
-
-</html>
+            <p>&copy; 2024 Service de Réparation. Tous droits réservés.</
