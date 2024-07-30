@@ -13,6 +13,118 @@
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Styles pour le site avec une palette orange et noir */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: #000; /* Fond noir pour tout le site */
+        }
+        header {
+            background: #111; /* Noir très foncé pour l'en-tête */
+            color: #fff;
+            padding: 10px 0;
+        }
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-menu li {
+            margin: 0 10px;
+        }
+        .nav-menu a {
+            color: #f76c6c; /* Orange pour les liens de navigation */
+            text-decoration: none;
+            padding: 10px;
+            transition: background 0.3s, color 0.3s;
+        }
+        .nav-menu a:hover {
+            background: #f76c6c; /* Orange pour l'arrière-plan au survol */
+            color: #fff; /* Texte blanc au survol */
+            border-radius: 5px;
+        }
+        .logo img {
+            max-width: 100px;
+        }
+        .btn-main {
+            display: inline-block;
+            background: #f76c6c; /* Orange pour le bouton principal */
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn-main:hover {
+            background: #d65a5a; /* Orange plus foncé au survol */
+        }
+        .hero {
+            color: #fff;
+            background: #333; /* Fond sombre pour la section hero */
+            padding: 60px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.2em;
+        }
+        .fade-in {
+            animation: fadeIn 1.5s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .services, .testimonials, .why-us {
+            padding: 40px 0;
+            background: #222; /* Fond sombre pour les sections */
+        }
+        .services h2, .testimonials h2, .why-us h2 {
+            color: #f76c6c; /* Orange pour les titres des sections */
+            text-align: center;
+        }
+        .service-list, .why-us-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .service-item, .why-us-item {
+            flex: 1 1 calc(33.333% - 20px);
+            margin: 10px;
+            padding: 20px;
+            background: #333; /* Fond sombre pour les éléments de service */
+            color: #fff;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .service-item i, .why-us-item i {
+            font-size: 2em;
+            color: #f76c6c; /* Orange pour les icônes */
+            margin-bottom: 10px;
+        }
+        .testimonial-item {
+            padding: 20px;
+            background: #444; /* Fond plus clair pour les témoignages */
+            color: #fff;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        footer {
+            background: #111; /* Noir très foncé pour le pied de page */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
 </head>
 <body>
     <header>

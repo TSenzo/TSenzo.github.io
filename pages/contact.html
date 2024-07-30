@@ -19,11 +19,163 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css">
     <style>
-        /* Style pour la carte */
+        /* Palette de couleurs orange et noir */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #000; /* Fond noir */
+            color: #fff; /* Texte blanc */
+        }
+
+        header {
+            background: #111; /* Fond noir très foncé pour l'en-tête */
+            padding: 10px 0;
+        }
+
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-menu li {
+            margin: 0 10px;
+        }
+
+        .nav-menu a {
+            color: #f76c6c; /* Orange pour les liens */
+            text-decoration: none;
+            padding: 10px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            background: #f76c6c; /* Arrière-plan orange au survol */
+            color: #fff; /* Texte blanc au survol */
+            border-radius: 5px;
+        }
+
+        .menu-toggle {
+            display: none; /* Masqué par défaut */
+        }
+
+        .logo img {
+            max-width: 100px;
+        }
+
+        h2 {
+            color: #f76c6c; /* Orange pour les titres principaux */
+            text-align: center;
+        }
+
+        .contact-form, .map, .newsletter, .faq {
+            padding: 60px 0;
+        }
+
+        .contact-form form, .newsletter form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #222; /* Fond noir pour les formulaires */
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #f76c6c; /* Orange pour les labels */
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background: #333; /* Fond noir pour les champs de saisie */
+            color: #fff; /* Texte blanc */
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: #999; /* Couleur des placeholders */
+        }
+
+        button.btn-main {
+            background: #f76c6c; /* Orange pour les boutons */
+            color: #fff; /* Texte blanc */
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button.btn-main:hover {
+            background: #d65a5a; /* Orange plus foncé au survol */
+        }
+
+        .faq-item {
+            background: #333; /* Fond noir pour les items de la FAQ */
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .faq-item h3 {
+            color: #f76c6c; /* Orange pour les questions de la FAQ */
+        }
+
         #map {
             height: 400px;
             width: 100%;
             border: 1px solid #ddd;
+        }
+
+        footer {
+            background: #111; /* Fond noir très foncé pour le pied de page */
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p, .social-media a {
+            color: #f76c6c; /* Orange pour le texte du pied de page et les icônes de réseaux sociaux */
+        }
+
+        .social-media a {
+            margin: 0 10px;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #fff; /* Blanc au survol */
+        }
+
+        /* Pour les petits écrans */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+            }
+
+            .menu-toggle {
+                display: block;
+                cursor: pointer;
+                color: #f76c6c;
+                font-size: 1.5em;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu a {
+                padding: 15px;
+                text-align: center;
+                width: 100%;
+            }
         }
     </style>
 </head>

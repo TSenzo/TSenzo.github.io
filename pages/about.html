@@ -8,6 +8,110 @@
     <meta name="keywords" content="à propos, réparation informatique, service de réparation, expérience, entreprise">
     <title>À Propos - Service de Réparation</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <style>
+        /* Palette de couleurs orange et noir */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #000; /* Fond noir */
+            color: #fff; /* Texte blanc */
+        }
+
+        header {
+            background: #111; /* Fond noir très foncé pour l'en-tête */
+            padding: 10px 0;
+        }
+
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-menu li {
+            margin: 0 10px;
+        }
+
+        .nav-menu a {
+            color: #f76c6c; /* Orange pour les liens */
+            text-decoration: none;
+            padding: 10px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            background: #f76c6c; /* Arrière-plan orange au survol */
+            color: #fff; /* Texte blanc au survol */
+            border-radius: 5px;
+        }
+
+        .logo img {
+            max-width: 100px;
+        }
+
+        h2, h3 {
+            color: #f76c6c; /* Orange pour les titres */
+        }
+
+        p, ul {
+            line-height: 1.6;
+        }
+
+        .about {
+            padding: 60px 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: #222; /* Fond noir pour les éléments de liste */
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: #111; /* Fond noir très foncé pour le pied de page */
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            color: #f76c6c; /* Orange pour le texte du pied de page */
+        }
+
+        /* Pour les petits écrans */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+            }
+
+            .menu-toggle {
+                display: block;
+                cursor: pointer;
+                color: #f76c6c;
+                font-size: 1.5em;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu a {
+                padding: 15px;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -56,6 +160,11 @@
     <script>
         // Met à jour l'année en cours dans le pied de page
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Fonctionnalité pour le menu mobile
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
     </script>
 </body>
 
