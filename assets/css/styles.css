@@ -6,7 +6,6 @@ body {
     color: #333;
     background-color: #f4f4f4;
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
 .container {
@@ -24,16 +23,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header .logo img {
     height: 50px;
-    transition: transform 0.3s;
-}
-
-header .logo img:hover {
-    transform: scale(1.1);
 }
 
 nav ul {
@@ -51,23 +44,10 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    position: relative;
 }
 
-nav ul li a::after {
-    content: "";
-    display: block;
-    height: 2px;
-    background: #ff5722;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    transition: width 0.3s;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 /* Section Héros */
@@ -78,12 +58,6 @@ nav ul li a:hover::after {
     text-align: center;
     padding: 100px 20px;
     margin-bottom: 20px;
-    overflow: hidden;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
 }
 
 .hero::before {
@@ -93,38 +67,43 @@ nav ul li a:hover::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.hero h1,
+.hero p,
+.btn-main {
+    position: relative;
 }
 
 .hero h1 {
-    font-size: 4rem;
-    margin: 0;
-    animation: fadeInUp 1s ease-out;
+    font-size: 3rem;
+    margin: 0 0 10px;
+    animation: fadeInDown 1s;
 }
 
 .hero p {
-    font-size: 1.5rem;
-    margin: 10px 0;
-    animation: fadeInUp 1.5s ease-out;
+    font-size: 1.2rem;
+    margin: 0;
+    animation: fadeInUp 1s;
 }
 
 .btn-main {
     background-color: #ff5722;
     color: #fff;
-    padding: 15px 30px;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     display: inline-block;
     margin-top: 20px;
-    transition: background-color 0.3s, transform 0.3s;
-    animation: bounceIn 2s ease;
+    animation: bounceIn 1s;
 }
 
 .btn-main:hover {
     background-color: #e64a19;
-    transform: scale(1.05);
 }
 
 /* Services */
@@ -151,8 +130,9 @@ nav ul li a:hover::after {
     background-color: #f9f9f9;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     width: 30%;
+    margin: 10px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
     animation: fadeInUp 1s ease-out;
@@ -160,7 +140,7 @@ nav ul li a:hover::after {
 
 .service-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
 }
 
 .service-item i {
@@ -198,8 +178,9 @@ nav ul li a:hover::after {
     background-color: #fff;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     width: 30%;
+    margin: 10px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
     animation: fadeInUp 1s ease-out;
@@ -207,12 +188,12 @@ nav ul li a:hover::after {
 
 .testimonial-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
 }
 
 .testimonial-item p {
     font-style: italic;
-    margin: 0;
+    margin-bottom: 10px;
 }
 
 .testimonial-item h4 {
@@ -244,8 +225,9 @@ nav ul li a:hover::after {
     background-color: #f9f9f9;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     width: 30%;
+    margin: 10px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
     animation: fadeInUp 1s ease-out;
@@ -253,7 +235,7 @@ nav ul li a:hover::after {
 
 .why-us-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
 }
 
 .why-us-item i {
@@ -272,7 +254,7 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 /* Animations */
@@ -282,6 +264,17 @@ footer {
     }
     to {
         opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -297,11 +290,11 @@ footer {
 }
 
 @keyframes bounceIn {
-    from {
+    0% {
         opacity: 0;
-        transform: scale(0.5);
+        transform: scale(0.3);
     }
-    60% {
+    50% {
         opacity: 1;
         transform: scale(1.1);
     }
