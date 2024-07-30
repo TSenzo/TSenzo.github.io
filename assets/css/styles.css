@@ -69,7 +69,7 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('assets/images/hero-bg-overlay.jpg') no-repeat center center/cover;
+    background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
     /* Changer le chemin si nécessaire */
     opacity: 0.5;
     /* Ajustez l'opacité pour le contraste du texte */
