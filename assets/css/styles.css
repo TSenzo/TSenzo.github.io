@@ -339,12 +339,105 @@ footer {
 
 /* Media Queries */
 
+/* Pour les écrans jusqu'à 768px (tablettes et petits écrans) */
 @media (max-width: 768px) {
-    .nav-menu {
-        flex-direction: column;
+
+    /* En-tête */
+    header {
+        padding: 1rem;
     }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu {
+        display: none; /* Masquer le menu pour les petits écrans */
+    }
+
+    .menu-toggle {
+        display: block; /* Afficher le bouton de menu hamburger */
+    }
+
+    .logo img {
+        height: 40px; /* Réduire la taille du logo */
+    }
+
+    /* Section Héros */
+    .hero {
+        padding: 5rem 1rem; /* Ajuster le padding pour les petits écrans */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Réduire la taille du titre */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Réduire la taille du texte */
+    }
+
+    .btn-main {
+        padding: 0.5rem 1rem; /* Réduire le padding du bouton */
+        font-size: 1rem; /* Ajuster la taille de la police du bouton */
+    }
+
+    /* Services */
     .service-item {
-        width: 100%;
-        text-align: center;
+        width: 100%; /* Les éléments de service occupent toute la largeur */
+        box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur totale */
+    }
+
+    .service-item i {
+        font-size: 2rem; /* Réduire la taille des icônes */
+    }
+
+    .service-item h3 {
+        font-size: 1.25rem; /* Ajuster la taille du titre des services */
+    }
+
+    /* Témoignages */
+    .testimonial-item {
+        width: 100%; /* Les éléments de témoignage occupent toute la largeur */
+    }
+
+    /* Pourquoi Nous */
+    .why-us-item {
+        width: 100%; /* Les éléments de "Pourquoi nous" occupent toute la largeur */
+    }
+
+    .why-us-item i {
+        font-size: 2rem; /* Réduire la taille des icônes */
+    }
+
+    .why-us-item h3 {
+        font-size: 1.25rem; /* Ajuster la taille du titre */
+    }
+}
+
+/* Pour les très petits écrans (moins de 480px) */
+@media (max-width: 480px) {
+
+    /* En-tête */
+    .menu-toggle {
+        font-size: 1.2rem; /* Ajuster la taille du bouton de menu hamburger */
+    }
+
+    /* Section Héros */
+    .hero {
+        padding: 4rem 0.5rem; /* Ajuster le padding pour les très petits écrans */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Réduire davantage la taille du titre */
+    }
+
+    .hero p {
+        font-size: 0.9rem; /* Réduire la taille du texte */
+    }
+
+    .btn-main {
+        padding: 0.4rem 0.8rem; /* Réduire le padding du bouton */
+        font-size: 0.9rem; /* Ajuster la taille de la police du bouton */
     }
 }
