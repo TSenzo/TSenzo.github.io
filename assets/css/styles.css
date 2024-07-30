@@ -59,7 +59,6 @@ nav ul li a:hover {
     padding: 100px 20px;
     margin-bottom: 20px;
     overflow: hidden;
-    /* Assurez-vous que le contenu ne dépasse pas */
 }
 
 .hero::before {
@@ -70,9 +69,7 @@ nav ul li a:hover {
     width: 100%;
     height: 100%;
     background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
-    /* Changer le chemin si nécessaire */
     opacity: 0.5;
-    /* Ajustez l'opacité pour le contraste du texte */
     z-index: -1;
 }
 
@@ -81,7 +78,6 @@ nav ul li a:hover {
 .btn-main {
     position: relative;
     z-index: 1;
-    /* S'assurer que le texte est au-dessus de l'image de fond */
 }
 
 .hero h1 {
@@ -160,7 +156,7 @@ nav ul li a:hover {
     font-size: 1.5rem;
 }
 
-/* Testimonials */
+/* Témoignages */
 .testimonials {
     padding: 60px 0;
     background-color: #f4f4f4;
@@ -207,7 +203,7 @@ nav ul li a:hover {
     font-weight: normal;
 }
 
-/* Why Us */
+/* Pourquoi Nous */
 .why-us {
     padding: 60px 0;
     background-color: #fff;
@@ -316,7 +312,6 @@ footer {
 
 /* Media Queries */
 @media (max-width: 768px) {
-
     .service-item,
     .testimonial-item,
     .why-us-item {
