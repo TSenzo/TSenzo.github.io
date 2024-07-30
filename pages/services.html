@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Découvrez les services professionnels d'InnoTech, incluant le développement logiciel, l'administration réseau, la cybersécurité et plus encore.">
+    <meta name="description" content="Découvrez les services professionnels d'InnoTech, incluant le développement logiciel, l'administration réseau, la cybersécurité et plus encore.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="InnoTech">
     <title>Nos Services - InnoTech</title>
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/styles.css">
@@ -16,15 +17,18 @@
     <header>
         <div class="container">
             <nav>
-                <ul class="nav-menu">
-                    <li><a href="../index.html">Accueil</a></li>
-                    <li><a href="../pages/about.html">À Propos</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
                 <div class="logo">
                     <a href="../index.html"><img src="../assets/images/logo.ico" alt="Logo InnoTech"></a>
                 </div>
+                <div class="menu-toggle" aria-label="Menu principal">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="../pages/about.html">À Propos</a></li>
+                    <li><a href="services.html" aria-current="page">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -33,9 +37,7 @@
         <section class="services-header fade-in">
             <div class="container">
                 <h1>Nos Services</h1>
-                <p>InnoTech propose une gamme complète de services pour répondre à vos besoins en matière de systèmes
-                    numériques, incluant le développement logiciel, l'administration réseau, la cybersécurité, et bien
-                    plus encore.</p>
+                <p>InnoTech propose une gamme complète de services pour répondre à vos besoins en matière de systèmes numériques, incluant le développement logiciel, l'administration réseau, la cybersécurité, et bien plus encore.</p>
             </div>
         </section>
 
@@ -44,49 +46,35 @@
                 <div class="service-item">
                     <i class="fas fa-laptop-code"></i>
                     <h2>Développement Logiciel</h2>
-                    <p>Nos experts en développement logiciel conçoivent et réalisent des applications sur mesure pour
-                        répondre aux besoins spécifiques de votre entreprise. Nous maîtrisons plusieurs langages de
-                        programmation, notamment C, C++, Java, et Python, ainsi que le développement web avec HTML, CSS,
-                        JavaScript et PHP.</p>
+                    <p>Nos experts en développement logiciel conçoivent et réalisent des applications sur mesure pour répondre aux besoins spécifiques de votre entreprise. Nous maîtrisons plusieurs langages de programmation, notamment C, C++, Java, et Python, ainsi que le développement web avec HTML, CSS, JavaScript et PHP.</p>
                     <a href="contact.html" class="btn-main">Contactez-nous pour un devis</a>
                 </div>
 
                 <div class="service-item">
                     <i class="fas fa-network-wired"></i>
                     <h2>Administration Réseau et Télécommunications</h2>
-                    <p>Nous assurons la conception, l'installation et la maintenance de vos réseaux informatiques. Nos
-                        services incluent la configuration et la gestion de serveurs, de routeurs et de commutateurs,
-                        ainsi que la mise en place de solutions de sécurité réseau telles que les pare-feux et les VPN.
-                    </p>
+                    <p>Nous assurons la conception, l'installation et la maintenance de vos réseaux informatiques. Nos services incluent la configuration et la gestion de serveurs, de routeurs et de commutateurs, ainsi que la mise en place de solutions de sécurité réseau telles que les pare-feux et les VPN.</p>
                     <a href="contact.html" class="btn-main">Demander une consultation</a>
                 </div>
 
                 <div class="service-item">
                     <i class="fas fa-shield-alt"></i>
                     <h2>Cybersécurité</h2>
-                    <p>Protégez votre entreprise des cybermenaces avec nos solutions de cybersécurité. Nous offrons des
-                        services de sécurité informatique, incluant la surveillance des réseaux, la gestion des accès et
-                        la protection contre les logiciels malveillants. Nous vous aidons à sécuriser vos données et vos
-                        infrastructures.</p>
+                    <p>Protégez votre entreprise des cybermenaces avec nos solutions de cybersécurité. Nous offrons des services de sécurité informatique, incluant la surveillance des réseaux, la gestion des accès et la protection contre les logiciels malveillants. Nous vous aidons à sécuriser vos données et vos infrastructures.</p>
                     <a href="contact.html" class="btn-main">En savoir plus</a>
                 </div>
 
                 <div class="service-item">
                     <i class="fas fa-cloud"></i>
                     <h2>Solutions de Cloud et Virtualisation</h2>
-                    <p>Optimisez vos ressources informatiques grâce à nos services de virtualisation et de cloud
-                        computing. Nous vous accompagnons dans la transition vers le cloud, l'hébergement de vos
-                        applications et la gestion de vos infrastructures virtualisées pour une meilleure efficacité et
-                        flexibilité.</p>
+                    <p>Optimisez vos ressources informatiques grâce à nos services de virtualisation et de cloud computing. Nous vous accompagnons dans la transition vers le cloud, l'hébergement de vos applications et la gestion de vos infrastructures virtualisées pour une meilleure efficacité et flexibilité.</p>
                     <a href="contact.html" class="btn-main">Découvrez nos offres</a>
                 </div>
 
                 <div class="service-item">
                     <i class="fas fa-cogs"></i>
                     <h2>Maintenance et Support Technique</h2>
-                    <p>Nous proposons des services de maintenance préventive et corrective pour assurer la disponibilité
-                        et la performance de vos systèmes informatiques. Nos techniciens interviennent rapidement pour
-                        résoudre vos problèmes techniques et minimiser les interruptions de service.</p>
+                    <p>Nous proposons des services de maintenance préventive et corrective pour assurer la disponibilité et la performance de vos systèmes informatiques. Nos techniciens interviennent rapidement pour résoudre vos problèmes techniques et minimiser les interruptions de service.</p>
                     <a href="contact.html" class="btn-main">Planifier une intervention</a>
                 </div>
             </div>
@@ -95,14 +83,24 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 InnoTech - Tous droits réservés.</p>
+            <p>&copy; <span id="year"></span> InnoTech - Tous droits réservés.</p>
             <div class="social-media">
-                <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Met à jour l'année en cours dans le pied de page
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Fonctionnalité pour le menu mobile
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>

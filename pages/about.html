@@ -1,38 +1,62 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="En savoir plus sur notre entreprise spécialisée dans la réparation informatique avec 10 ans d'expérience.">
+    <meta name="keywords" content="à propos, réparation informatique, service de réparation, expérience, entreprise">
     <title>À Propos - Service de Réparation</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
+
 <body>
     <header>
         <div class="container">
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="../index.html">Accueil</a></li>
-                    <li><a href="about.html">À Propos</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="../index.html" aria-label="Accueil">Accueil</a></li>
+                    <li><a href="about.html" aria-current="page" aria-label="À propos">À Propos</a></li>
+                    <li><a href="contact.html" aria-label="Contact">Contact</a></li>
                 </ul>
                 <div class="logo">
-                    <a href="../index.html" aria-label="Page d'accueil">
+                    <a href="../index.html" aria-label="Retour à la page d'accueil">
                         <img src="../assets/images/logo.ico" alt="Logo Service de Réparation">
                     </a>
                 </div>
             </nav>
         </div>
     </header>
-    <div class="container">
-        <main>
-            <h2>À Propos de Nous</h2>
-            <p>Nous sommes une entreprise spécialisée dans la réparation informatique depuis 10 ans.</p>
-        </main>
-    </div>
+
+    <main>
+        <div class="container">
+            <section class="about fade-in">
+                <h2>À Propos de Nous</h2>
+                <p>Nous sommes une entreprise spécialisée dans la réparation informatique avec plus de 10 ans d'expérience. Notre mission est de fournir des services de réparation de haute qualité pour tous vos besoins informatiques, qu'il s'agisse de matériel ou de logiciels. Notre équipe d'experts est dédiée à offrir des solutions efficaces et rapides pour minimiser les interruptions dans votre activité.</p>
+                <h3>Notre Histoire</h3>
+                <p>Depuis notre création, nous avons servi des milliers de clients, allant des particuliers aux entreprises, en assurant des réparations fiables et professionnelles. Nous nous engageons à rester à la pointe de la technologie et à offrir un service client exceptionnel.</p>
+                <h3>Notre Équipe</h3>
+                <p>Notre équipe est composée de techniciens certifiés et expérimentés, passionnés par la technologie et la réparation informatique. Chaque membre de notre équipe suit régulièrement des formations pour se tenir à jour avec les dernières innovations et pratiques de l'industrie.</p>
+                <h3>Nos Valeurs</h3>
+                <ul>
+                    <li>Qualité : Nous nous engageons à fournir des réparations de haute qualité et à utiliser les meilleurs composants et outils disponibles.</li>
+                    <li>Fiabilité : Nous nous efforçons de garantir des services fiables et de respecter les délais annoncés.</li>
+                    <li>Service Client : Nous valorisons la satisfaction de nos clients et nous nous efforçons de répondre à leurs besoins de manière rapide et efficace.</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
     <footer>
         <div class="container">
-            <p>&copy; 2024 Service de Réparation. Tous droits réservés.</p>
+            <p>&copy; <span id="year"></span> Service de Réparation. Tous droits réservés.</p>
         </div>
     </footer>
+
+    <script>
+        // Met à jour l'année en cours dans le pied de page
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
+
 </html>

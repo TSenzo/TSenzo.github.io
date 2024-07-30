@@ -10,17 +10,20 @@
     <meta property="og:description" content="Contactez InnoTech pour tous vos besoins en réparation informatique.">
     <meta property="og:image" content="../assets/images/og-image.jpg">
     <meta property="og:url" content="https://www.innotech.com/contact.html">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="InnoTech">
     <title>Contact - InnoTech</title>
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css">
     <style>
         /* Style pour la carte */
         #map {
             height: 400px;
             width: 100%;
+            border: 1px solid #ddd;
         }
     </style>
 </head>
@@ -29,14 +32,17 @@
     <header>
         <div class="container">
             <nav>
-                <ul class="nav-menu">
-                    <li><a href="../index.html" aria-label="Accueil">Accueil</a></li>
-                    <li><a href="../pages/about.html" aria-label="À propos">À Propos</a></li>
-                    <li><a href="contact.html" aria-label="Contact">Contact</a></li>
-                </ul>
                 <div class="logo">
                     <a href="../index.html" aria-label="Retour à la page d'accueil"><img src="../assets/images/logo.ico" alt="Logo InnoTech"></a>
                 </div>
+                <div class="menu-toggle" aria-label="Menu principal">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html" aria-label="Accueil">Accueil</a></li>
+                    <li><a href="../pages/about.html" aria-label="À propos">À Propos</a></li>
+                    <li><a href="contact.html" aria-current="page" aria-label="Contact">Contact</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -45,17 +51,20 @@
         <section class="contact-form fade-in">
             <div class="container">
                 <h2>Contactez-Nous</h2>
-                <form id="contactForm" action="submit_form.php" method="POST">
-                    <label for="name">Nom :</label>
-                    <input type="text" id="name" name="name" required aria-required="true">
+                <form id="contactForm" action="submit_form.php" method="POST" aria-labelledby="contactFormTitle">
+                    <fieldset>
+                        <legend id="contactFormTitle">Formulaire de contact</legend>
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" required aria-required="true" placeholder="Votre nom">
 
-                    <label for="email">Email :</label>
-                    <input type="email" id="email" name="email" required aria-required="true">
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required aria-required="true" placeholder="Votre email">
 
-                    <label for="message">Message :</label>
-                    <textarea id="message" name="message" rows="4" required aria-required="true"></textarea>
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" rows="4" required aria-required="true" placeholder="Votre message"></textarea>
 
-                    <button type="submit" class="btn-main" aria-label="Envoyer votre message">Envoyer</button>
+                        <button type="submit" class="btn-main" aria-label="Envoyer votre message">Envoyer</button>
+                    </fieldset>
                 </form>
             </div>
         </section>
@@ -70,10 +79,13 @@
         <section class="newsletter fade-in">
             <div class="container">
                 <h2>Abonnez-vous à notre Newsletter</h2>
-                <form id="newsletterForm" action="subscribe_newsletter.php" method="POST">
-                    <label for="newsletterEmail">Email :</label>
-                    <input type="email" id="newsletterEmail" name="email" required aria-required="true">
-                    <button type="submit" class="btn-main" aria-label="S'abonner à la newsletter">S'abonner</button>
+                <form id="newsletterForm" action="subscribe_newsletter.php" method="POST" aria-labelledby="newsletterFormTitle">
+                    <fieldset>
+                        <legend id="newsletterFormTitle">Formulaire d'inscription à la newsletter</legend>
+                        <label for="newsletterEmail">Email :</label>
+                        <input type="email" id="newsletterEmail" name="email" required aria-required="true" placeholder="Votre email">
+                        <button type="submit" class="btn-main" aria-label="S'abonner à la newsletter">S'abonner</button>
+                    </fieldset>
                 </form>
             </div>
         </section>
@@ -103,7 +115,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 InnoTech - Service de Réparation Informatique. Tous droits réservés.</p>
+            <p>&copy; <span id="year"></span> InnoTech - Service de Réparation Informatique. Tous droits réservés.</p>
             <div class="social-media">
                 <a href="https://facebook.com" target="_blank" class="social-icon" aria-label="Lien vers notre page Facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://twitter.com" target="_blank" class="social-icon" aria-label="Lien vers notre page Twitter"><i class="fab fa-twitter"></i></a>
@@ -115,6 +127,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js" defer></script>
     <script>
+        // Met à jour l'année en cours dans le pied de page
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Initialise la carte
         function initMap() {
             var location = [43.6520, 0.5860]; // Coordonnées d'Auch
             var map = L.map('map').setView(location, 13);
@@ -131,6 +147,11 @@
         document.addEventListener('DOMContentLoaded', function () {
             initMap();
             AOS.init();
+        });
+
+        // Fonctionnalité pour le menu mobile
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
         });
     </script>
 </body>
