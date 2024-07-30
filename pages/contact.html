@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
 </head>
 
 <body>
@@ -50,7 +51,7 @@
         <section class="map fade-in">
             <div class="container">
                 <h2>Notre Localisation</h2>
-                <div id="map"></div>
+                <div id="map" style="height: 400px;"></div>
             </div>
         </section>
 
@@ -100,22 +101,26 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="../assets/js/animations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
     <script>
         function initMap() {
-            var location = { lat: 48.8566, lng: 2.3522 }; // Exemple pour Paris
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 12,
-                center: location
-            });
-            var marker = new google.maps.Marker({
-                position: location,
-                map: map
-            });
+            var location = [48.8566, 2.3522]; // Exemple pour Paris
+            var map = L.map('map').setView(location, 12);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            L.marker(location).addTo(map)
+                .bindPopup('<b>InnoTech</b><br>Notre bureau.')
+                .openPopup();
         }
-        AOS.init();
+
+        document.addEventListener('DOMContentLoaded', function () {
+            initMap();
+            AOS.init();
+        });
     </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 </body>
 
 </html>
