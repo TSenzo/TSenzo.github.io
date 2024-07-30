@@ -4,15 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contactez InnoTech pour tous vos besoins en réparation informatique.">
-    <title>Contact - InnoTech</title>
-    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <meta name="description" content="Votre description de page ici">
+    <title>Votre Titre</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
     <style>
-        /* Style pour la carte */
+        /* Styles personnalisés si nécessaire */
         #map {
             height: 400px;
             width: 100%;
@@ -24,12 +23,12 @@
     <header>
         <div class="container">
             <div class="logo">
-                <a href="../index.html"><img src="../assets/images/logo.png" alt="Logo InnoTech"></a>
+                <a href="index.html"><img src="assets/images/logo.png" alt="Logo InnoTech"></a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="../index.html">Accueil</a></li>
-                    <li><a href="../pages/about.html">À Propos</a></li>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À Propos</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -37,34 +36,47 @@
     </header>
 
     <main>
-        <section class="contact-form fade-in">
+        <section class="hero" data-aos="fade-up">
             <div class="container">
-                <h2>Contactez-Nous</h2>
-                <form id="contactForm" action="submit_form.php" method="POST">
-                    <label for="name">Nom :</label>
-                    <input type="text" id="name" name="name" required>
-
-                    <label for="email">Email :</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="message">Message :</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-
-                    <button type="submit" class="btn-main">Envoyer</button>
-                </form>
+                <h1>Réparation Informatique de Qualité</h1>
+                <p>Nous réparons vos ordinateurs et périphériques avec un service rapide et fiable.</p>
+                <a href="contact.html" class="btn-main">Contactez-nous</a>
             </div>
         </section>
 
-        <section class="map fade-in">
+        <section class="services">
             <div class="container">
-                <h2>Notre Localisation</h2>
-                <div id="map"></div>
+                <h2 data-aos="fade-up">Nos Services</h2>
+                <div class="service-list">
+                    <div class="service-item" data-aos="fade-right">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Réparation Ordinateur</h3>
+                        <p>Diagnostic complet et réparation de matériel informatique.</p>
+                    </div>
+                    <div class="service-item" data-aos="fade-left" data-aos-delay="200">
+                        <i class="fas fa-tools"></i>
+                        <h3>Assistance Logicielle</h3>
+                        <p>Résolution de problèmes logiciels et optimisation des performances.</p>
+                    </div>
+                    <div class="service-item" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Maintenance Préventive</h3>
+                        <p>Services de maintenance pour éviter les pannes futures.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="newsletter fade-in">
+        <section class="map">
             <div class="container">
-                <h2>Abonnez-vous à notre Newsletter</h2>
+                <h2 data-aos="fade-up">Notre Localisation à Auch</h2>
+                <div id="map" data-aos="zoom-in"></div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="container">
+                <h2 data-aos="fade-up">Abonnez-vous à notre Newsletter</h2>
                 <form id="newsletterForm" action="subscribe_newsletter.php" method="POST">
                     <label for="newsletterEmail">Email :</label>
                     <input type="email" id="newsletterEmail" name="email" required>
@@ -73,22 +85,22 @@
             </div>
         </section>
 
-        <section class="faq fade-in">
+        <section class="faq">
             <div class="container">
-                <h2>Questions Fréquemment Posées</h2>
-                <div class="faq-item">
+                <h2 data-aos="fade-up">Questions Fréquemment Posées</h2>
+                <div class="faq-item" data-aos="fade-right">
                     <h3>Quelle est votre politique de garantie ?</h3>
                     <p>Nous offrons une garantie de 6 mois sur toutes les réparations effectuées.</p>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item" data-aos="fade-left" data-aos-delay="200">
                     <h3>Combien de temps prend une réparation ?</h3>
                     <p>La durée dépend du problème, mais la plupart des réparations sont effectuées dans un délai de 24 à 48 heures.</p>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
                     <h3>Comment puis-je suivre l'état de ma réparation ?</h3>
                     <p>Vous pouvez suivre l'état de votre réparation en nous contactant directement ou en vous connectant à votre espace client.</p>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item" data-aos="fade-left" data-aos-delay="600">
                     <h3>Proposez-vous un service à domicile ?</h3>
                     <p>Nous offrons des services à domicile dans certaines zones. Contactez-nous pour plus de détails.</p>
                 </div>
@@ -108,23 +120,8 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
     <script>
-        function initMap() {
-            var location = [43.6522, 0.5861];
-            var map = L.map('map').setView(location, 15);
-
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-
-            L.marker(location).addTo(map)
-                .bindPopup('<b>Galešnjak</b><br>Île en forme de cœur.')
-                .openPopup();
-        }
-
         document.addEventListener('DOMContentLoaded', function () {
-            initMap();
             AOS.init();
         });
     </script>
