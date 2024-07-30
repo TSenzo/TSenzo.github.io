@@ -23,168 +23,7 @@
         #map {
             height: 400px;
             width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Formulaire de contact */
-        .contact-form {
-            background: linear-gradient(to right, #ff5722, #ff8a65);
-            padding: 60px 0;
-            color: #fff;
-        }
-
-        .contact-form h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            text-align: center;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .contact-form form {
-            background: #fff;
-            border-radius: 10px;
-            padding: 40px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .contact-form label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: calc(100% - 20px);
-            padding: 10px;
             border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
-
-        .contact-form button {
-            background-color: var(--primary-color);
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .contact-form button:hover {
-            background-color: #e64a19;
-        }
-
-        /* Newsletter */
-        .newsletter {
-            background: #fff;
-            padding: 60px 0;
-        }
-
-        .newsletter h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            text-align: center;
-            color: var(--secondary-color);
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .newsletter form {
-            display: flex;
-            justify-content: center;
-        }
-
-        .newsletter input {
-            width: 300px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-right: 10px;
-        }
-
-        .newsletter button {
-            background-color: var(--primary-color);
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .newsletter button:hover {
-            background-color: #e64a19;
-        }
-
-        /* FAQ */
-        .faq {
-            background: #f4f4f4;
-            padding: 60px 0;
-        }
-
-        .faq h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            text-align: center;
-            color: var(--secondary-color);
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .faq-item {
-            background: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 10px auto;
-            max-width: 800px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            transition: box-shadow 0.3s ease;
-        }
-
-        .faq-item:hover {
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .faq-item h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        .faq-item p {
-            margin: 0;
-        }
-
-        /* Menu mobile */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                background: var(--secondary-color);
-                position: absolute;
-                top: 60px;
-                left: 0;
-                padding: 10px 0;
-            }
-
-            .nav-menu.active {
-                display: flex;
-            }
-
-            .nav-menu li {
-                margin: 10px 0;
-            }
-
-            .nav-menu li a {
-                color: #fff;
-                font-size: 1.2rem;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
         }
     </style>
 </head>
@@ -194,8 +33,7 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <a href="../index.html" aria-label="Retour à la page d'accueil"><img src="../assets/images/logo.ico"
-                            alt="Logo InnoTech"></a>
+                    <a href="../index.html" aria-label="Retour à la page d'accueil"><img src="../assets/images/logo.ico" alt="Logo InnoTech"></a>
                 </div>
                 <div class="menu-toggle" aria-label="Menu principal">
                     <i class="fas fa-bars"></i>
@@ -221,12 +59,10 @@
                         <input type="text" id="name" name="name" required aria-required="true" placeholder="Votre nom">
 
                         <label for="email">Email :</label>
-                        <input type="email" id="email" name="email" required aria-required="true"
-                            placeholder="Votre email">
+                        <input type="email" id="email" name="email" required aria-required="true" placeholder="Votre email">
 
                         <label for="message">Message :</label>
-                        <textarea id="message" name="message" rows="4" required aria-required="true"
-                            placeholder="Votre message"></textarea>
+                        <textarea id="message" name="message" rows="4" required aria-required="true" placeholder="Votre message"></textarea>
 
                         <button type="submit" class="btn-main" aria-label="Envoyer votre message">Envoyer</button>
                     </fieldset>
@@ -244,13 +80,12 @@
         <section class="newsletter fade-in">
             <div class="container">
                 <h2>Abonnez-vous à notre Newsletter</h2>
-                <form id="newsletterForm" action="subscribe_newsletter.php" method="POST"
-                    aria-labelledby="newsletterFormTitle">
+                <form id="newsletterForm" action="subscribe_newsletter.php" method="POST" aria-labelledby="newsletterFormTitle">
                     <fieldset>
                         <legend id="newsletterFormTitle">Formulaire d'inscription à la newsletter</legend>
-                        <input type="email" id="newsletterEmail" name="email" required aria-required="true"
-                            placeholder="Votre email">
-                        <button type="submit" aria-label="S'abonner à la newsletter">S'abonner</button>
+                        <label for="newsletterEmail">Email :</label>
+                        <input type="email" id="newsletterEmail" name="email" required aria-required="true" placeholder="Votre email">
+                        <button type="submit" class="btn-main" aria-label="S'abonner à la newsletter">S'abonner</button>
                     </fieldset>
                 </form>
             </div>
@@ -265,18 +100,15 @@
                 </div>
                 <div class="faq-item">
                     <h3>Combien de temps prend une réparation ?</h3>
-                    <p>La durée dépend du problème, mais la plupart des réparations sont effectuées dans un délai de 24
-                        à 48 heures.</p>
+                    <p>La durée dépend du problème, mais la plupart des réparations sont effectuées dans un délai de 24 à 48 heures.</p>
                 </div>
                 <div class="faq-item">
                     <h3>Comment puis-je suivre l'état de ma réparation ?</h3>
-                    <p>Vous pouvez suivre l'état de votre réparation en nous contactant directement ou en vous
-                        connectant à votre espace client.</p>
+                    <p>Vous pouvez suivre l'état de votre réparation en nous contactant directement ou en vous connectant à votre espace client.</p>
                 </div>
                 <div class="faq-item">
                     <h3>Proposez-vous un service à domicile ?</h3>
-                    <p>Nous offrons des services à domicile dans certaines zones. Contactez-nous pour plus de détails.
-                    </p>
+                    <p>Nous offrons des services à domicile dans certaines zones. Contactez-nous pour plus de détails.</p>
                 </div>
             </div>
         </section>
@@ -286,12 +118,9 @@
         <div class="container">
             <p>&copy; <span id="year"></span> InnoTech - Service de Réparation Informatique. Tous droits réservés.</p>
             <div class="social-media">
-                <a href="https://facebook.com" target="_blank" class="social-icon"
-                    aria-label="Lien vers notre page Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com" target="_blank" class="social-icon"
-                    aria-label="Lien vers notre page Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://instagram.com" target="_blank" class="social-icon"
-                    aria-label="Lien vers notre page Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank" class="social-icon" aria-label="Lien vers notre page Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank" class="social-icon" aria-label="Lien vers notre page Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank" class="social-icon" aria-label="Lien vers notre page Instagram"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </footer>
@@ -322,7 +151,7 @@
         });
 
         // Fonctionnalité pour le menu mobile
-        document.querySelector('.menu-toggle').addEventListener('click', function () {
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('.nav-menu').classList.toggle('active');
         });
     </script>
