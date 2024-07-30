@@ -57,18 +57,36 @@ nav ul li a:hover {
     text-align: center;
     padding: 100px 20px;
     margin-bottom: 20px;
+    position: relative;
 }
 
+/* Image de fond derrière le titre */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
+    opacity: 0.5;
+    /* Ajustez l'opacité pour rendre le texte plus lisible si nécessaire */
+    z-index: -1;
+}
+
+/* Ajustements du titre et du texte dans la section héro */
 .hero h1 {
     font-size: 3rem;
     margin: 0 0 10px;
     animation: fadeInDown 1s;
+    position: relative;
 }
 
 .hero p {
     font-size: 1.2rem;
     margin: 0;
     animation: fadeInUp 1s;
+    position: relative;
 }
 
 .btn-main {
@@ -81,6 +99,7 @@ nav ul li a:hover {
     display: inline-block;
     margin-top: 20px;
     animation: fadeIn 1.5s;
+    position: relative;
 }
 
 .btn-main:hover {
@@ -109,7 +128,7 @@ nav ul li a:hover {
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 30%;
     margin: 10px;
     text-align: center;
@@ -118,7 +137,7 @@ nav ul li a:hover {
 
 .service-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .service-item i {
@@ -153,7 +172,7 @@ nav ul li a:hover {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 30%;
     margin: 10px;
     text-align: center;
@@ -162,7 +181,7 @@ nav ul li a:hover {
 
 .testimonial-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .testimonial-item p {
@@ -196,7 +215,7 @@ nav ul li a:hover {
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 30%;
     margin: 10px;
     text-align: center;
@@ -205,7 +224,7 @@ nav ul li a:hover {
 
 .why-us-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .why-us-item i {
@@ -231,6 +250,7 @@ footer {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -241,6 +261,7 @@ footer {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -252,6 +273,7 @@ footer {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -260,6 +282,7 @@ footer {
 
 /* Media Queries */
 @media (max-width: 768px) {
+
     .service-item,
     .testimonial-item,
     .why-us-item {
