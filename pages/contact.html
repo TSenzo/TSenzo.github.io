@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contactez InnoTech pour tous vos besoins en réparation informatique.">
+    <meta name="keywords" content="contact, réparation informatique, service client, InnoTech">
+    <meta property="og:title" content="Contact - InnoTech">
+    <meta property="og:description" content="Contactez InnoTech pour tous vos besoins en réparation informatique.">
+    <meta property="og:image" content="../assets/images/og-image.jpg">
+    <meta property="og:url" content="https://www.innotech.com/contact.html">
     <title>Contact - InnoTech</title>
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/styles.css">
@@ -25,12 +30,12 @@
         <div class="container">
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="../index.html">Accueil</a></li>
-                    <li><a href="../pages/about.html">À Propos</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="../index.html" aria-label="Accueil">Accueil</a></li>
+                    <li><a href="../pages/about.html" aria-label="À propos">À Propos</a></li>
+                    <li><a href="contact.html" aria-label="Contact">Contact</a></li>
                 </ul>
                 <div class="logo">
-                    <a href="../index.html"><img src="../assets/images/logo.ico" alt="Logo InnoTech"></a>
+                    <a href="../index.html" aria-label="Retour à la page d'accueil"><img src="../assets/images/logo.ico" alt="Logo InnoTech"></a>
                 </div>
             </nav>
         </div>
@@ -42,15 +47,15 @@
                 <h2>Contactez-Nous</h2>
                 <form id="contactForm" action="submit_form.php" method="POST">
                     <label for="name">Nom :</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" required aria-required="true">
 
                     <label for="email">Email :</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" required aria-required="true">
 
                     <label for="message">Message :</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <textarea id="message" name="message" rows="4" required aria-required="true"></textarea>
 
-                    <button type="submit" class="btn-main">Envoyer</button>
+                    <button type="submit" class="btn-main" aria-label="Envoyer votre message">Envoyer</button>
                 </form>
             </div>
         </section>
@@ -58,7 +63,7 @@
         <section class="map fade-in">
             <div class="container">
                 <h2>Notre Localisation à Auch</h2>
-                <div id="map"></div>
+                <div id="map" aria-label="Carte montrant notre localisation à Auch"></div>
             </div>
         </section>
 
@@ -67,8 +72,8 @@
                 <h2>Abonnez-vous à notre Newsletter</h2>
                 <form id="newsletterForm" action="subscribe_newsletter.php" method="POST">
                     <label for="newsletterEmail">Email :</label>
-                    <input type="email" id="newsletterEmail" name="email" required>
-                    <button type="submit" class="btn-main">S'abonner</button>
+                    <input type="email" id="newsletterEmail" name="email" required aria-required="true">
+                    <button type="submit" class="btn-main" aria-label="S'abonner à la newsletter">S'abonner</button>
                 </form>
             </div>
         </section>
@@ -100,15 +105,15 @@
         <div class="container">
             <p>&copy; 2024 InnoTech - Service de Réparation Informatique. Tous droits réservés.</p>
             <div class="social-media">
-                <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank" class="social-icon" aria-label="Lien vers notre page Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank" class="social-icon" aria-label="Lien vers notre page Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank" class="social-icon" aria-label="Lien vers notre page Instagram"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js" defer></script>
     <script>
         function initMap() {
             var location = [43.6520, 0.5860]; // Coordonnées d'Auch
