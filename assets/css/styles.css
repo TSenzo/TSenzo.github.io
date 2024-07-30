@@ -338,19 +338,13 @@ footer {
 }
 
 /* Media Queries */
+
 @media (max-width: 768px) {
-    .service-item,
-    .testimonial-item,
-    .why-us-item {
-        width: 100%;
-        margin: 10px 0;
-    }
-
     .nav-menu {
-        display: none;
+        flex-direction: column;
     }
-
-    .menu-toggle {
-        display: block;
+    .service-item {
+        width: 100%;
+        text-align: center;
     }
 }
