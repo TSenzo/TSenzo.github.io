@@ -1,43 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Service de Réparation</title>
+    <meta name="description" content="Contactez InnoTech pour tous vos besoins en réparation informatique.">
+    <title>Contact - InnoTech</title>
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
+
 <body>
     <header>
         <div class="container">
-            <h1>Service de Réparation</h1>
+            <div class="logo">
+                <a href="../index.html"><img src="../assets/images/logo.png" alt="Logo InnoTech"></a>
+            </div>
             <nav>
                 <ul>
                     <li><a href="../index.html">Accueil</a></li>
-                    <li><a href="about.html">À Propos</a></li>
+                    <li><a href="../pages/about.html">À Propos</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <div class="container">
-        <main>
-            <h2>Contactez-Nous</h2>
-            <form>
-                <label for="name">Nom :</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message :</label>
-                <textarea id="message" name="message" required></textarea>
-                
-                <button type="submit">Envoyer</button>
-            </form>
-        </main>
-    </div>
+
+    <main>
+        <section class="contact-form fade-in">
+            <div class="container">
+                <h2>Contactez-Nous</h2>
+                <form id="contactForm" action="submit_form.php" method="POST">
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit" class="btn-main">Envoyer</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="map fade-in">
+            <div class="container">
+                <h2>Notre Localisation</h2>
+                <div id="map"></div>
+            </div>
+        </section>
+
+        <section class="newsletter fade-in">
+            <div class="container">
+                <h2>Abonnez-vous à notre Newsletter</h2>
+                <form id="newsletterForm" action="subscribe_newsletter.php" method="POST">
+                    <label for="newsletterEmail">Email :</label>
+                    <input type="email" id="newsletterEmail" name="email" required>
+                    <button type="submit" class="btn-main">S'abonner</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="faq fade-in">
+            <div class="container">
+                <h2>Questions Fréquemment Posées</h2>
+                <div class="faq-item">
+                    <h3>Quelle est votre politique de garantie ?</h3>
+                    <p>Nous offrons une garantie de 6 mois sur toutes les réparations effectuées.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Combien de temps prend une réparation ?</h3>
+                    <p>La durée dépend du problème, mais la plupart des réparations sont effectuées dans un délai de 24 à 48 heures.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Comment puis-je suivre l'état de ma réparation ?</h3>
+                    <p>Vous pouvez suivre l'état de votre réparation en nous contactant directement ou en vous connectant à votre espace client.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Proposez-vous un service à domicile ?</h3>
+                    <p>Nous offrons des services à domicile dans certaines zones. Contactez-nous pour plus de détails.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2024 Service de Réparation</p>
+        <div class="container">
+            <p>&copy; 2024 InnoTech - Service de Réparation Informatique. Tous droits réservés.</p>
+            <div class="social-media">
+                <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../assets/js/animations.js"></script>
+    <script>
+        function initMap() {
+            var location = { lat: 48.8566, lng: 2.3522 }; // Exemple pour Paris
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+        AOS.init();
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 </body>
+
 </html>
