@@ -52,15 +52,15 @@ nav ul li a:hover {
 
 /* Section Héros */
 .hero {
-    background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
+    position: relative; /* Important pour positionner le pseudo-élément correctement */
+    background: url('assets/images/logo.png') no-repeat center center/cover;
     color: #fff;
     text-align: center;
     padding: 100px 20px;
     margin-bottom: 20px;
-    position: relative;
 }
 
-/* Image de fond derrière le titre */
+/* Image de fond avec opacité pour la section héro */
 .hero::before {
     content: "";
     position: absolute;
@@ -68,25 +68,28 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
-    opacity: 0.5;
-    /* Ajustez l'opacité pour rendre le texte plus lisible si nécessaire */
+    background: url('assets/images/logo.png') no-repeat center center/cover;
+    opacity: 0.5; /* Ajustez l'opacité pour rendre le texte plus lisible si nécessaire */
     z-index: -1;
 }
 
 /* Ajustements du titre et du texte dans la section héro */
+.hero h1,
+.hero p,
+.btn-main {
+    position: relative;
+}
+
 .hero h1 {
     font-size: 3rem;
     margin: 0 0 10px;
     animation: fadeInDown 1s;
-    position: relative;
 }
 
 .hero p {
     font-size: 1.2rem;
     margin: 0;
     animation: fadeInUp 1s;
-    position: relative;
 }
 
 .btn-main {
@@ -99,7 +102,6 @@ nav ul li a:hover {
     display: inline-block;
     margin-top: 20px;
     animation: fadeIn 1.5s;
-    position: relative;
 }
 
 .btn-main:hover {
