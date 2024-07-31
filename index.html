@@ -14,136 +14,349 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Styles pour le site avec une palette orange et noir */
-        body {
-            font-family: Arial, sans-serif;
+        /* Global Styles */
+        body, html {
             margin: 0;
             padding: 0;
+            font-family: 'Poppins', sans-serif;
             color: #333;
-            background: #000; /* Fond noir pour tout le site */
+            background-color: #000;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Header Styles */
         header {
-            background: #111; /* Noir très foncé pour l'en-tête */
+            position: fixed;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.85);
             color: #fff;
-            padding: 10px 0;
+            z-index: 1000;
+            transition: background 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
         .nav-menu {
             list-style: none;
             padding: 0;
             margin: 0;
             display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-menu li {
+            margin: 0 15px;
+        }
+
+        .nav-menu a {
+            color: #f76c6c;
+            padding: 15px 0;
+            display: inline-block;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #fff;
+        }
+
+        .logo img {
+            max-width: 120px;
+        }
+
+        .header-container {
+            display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 15px 0;
         }
-        .nav-menu li {
-            margin: 0 10px;
+
+        .menu-toggle {
+            display: none;
         }
-        .nav-menu a {
-            color: #f76c6c; /* Orange pour les liens de navigation */
-            text-decoration: none;
-            padding: 10px;
-            transition: background 0.3s, color 0.3s;
-        }
-        .nav-menu a:hover {
-            background: #f76c6c; /* Orange pour l'arrière-plan au survol */
-            color: #fff; /* Texte blanc au survol */
-            border-radius: 5px;
-        }
-        .logo img {
-            max-width: 100px;
-        }
-        .btn-main {
-            display: inline-block;
-            background: #f76c6c; /* Orange pour le bouton principal */
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .btn-main:hover {
-            background: #d65a5a; /* Orange plus foncé au survol */
-        }
+
+        /* Hero Section */
         .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.1)), url('assets/images/hero-bg.jpg') no-repeat center center/cover;
             color: #fff;
-            background: #333; /* Fond sombre pour la section hero */
-            padding: 60px 0;
             text-align: center;
+            padding: 20px;
         }
+
         .hero h1 {
-            font-size: 2.5em;
-            margin: 0;
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease-out forwards;
         }
+
         .hero p {
             font-size: 1.2em;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease-out forwards;
         }
-        .fade-in {
-            animation: fadeIn 1.5s ease-out;
+
+        .btn-main {
+            display: inline-block;
+            background: #f76c6c;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+            animation: fadeInUp 1.2s ease-out forwards;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+
+        .btn-main:hover {
+            background: #d65a5a;
+            transform: translateY(-5px);
         }
-        .services, .testimonials, .why-us {
-            padding: 40px 0;
-            background: #222; /* Fond sombre pour les sections */
+
+        /* Keyframes for animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        .services h2, .testimonials h2, .why-us h2 {
-            color: #f76c6c; /* Orange pour les titres des sections */
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Services Section */
+        .services {
+            padding: 60px 0;
+            background: #222;
+            color: #fff;
+        }
+
+        .services h2 {
             text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #f76c6c;
         }
-        .service-list, .why-us-list {
+
+        .service-list {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            gap: 30px;
         }
-        .service-item, .why-us-item {
-            flex: 1 1 calc(33.333% - 20px);
-            margin: 10px;
+
+        .service-item {
+            flex: 1 1 300px;
+            background: #333;
             padding: 20px;
-            background: #333; /* Fond sombre pour les éléments de service */
-            color: #fff;
-            border-radius: 5px;
+            border-radius: 10px;
             text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-        .service-item i, .why-us-item i {
-            font-size: 2em;
-            color: #f76c6c; /* Orange pour les icônes */
+
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-item i {
+            font-size: 3em;
+            color: #f76c6c;
+            margin-bottom: 15px;
+        }
+
+        .service-item h3 {
+            font-size: 1.5em;
             margin-bottom: 10px;
         }
-        .testimonial-item {
-            padding: 20px;
-            background: #444; /* Fond plus clair pour les témoignages */
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 60px 0;
+            background: #444;
             color: #fff;
-            border-radius: 5px;
-            margin: 10px;
         }
+
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #f76c6c;
+        }
+
+        .testimonial-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .testimonial-item {
+            flex: 1 1 300px;
+            background: #555;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-item h4 {
+            font-size: 1.2em;
+            margin-top: 15px;
+            color: #f76c6c;
+        }
+
+        /* Why Us Section */
+        .why-us {
+            padding: 60px 0;
+            background: #222;
+            color: #fff;
+        }
+
+        .why-us h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #f76c6c;
+        }
+
+        .why-us-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .why-us-item {
+            flex: 1 1 300px;
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .why-us-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .why-us-item i {
+            font-size: 3em;
+            color: #f76c6c;
+            margin-bottom: 15px;
+        }
+
+        .why-us-item h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
         footer {
-            background: #111; /* Noir très foncé pour le pied de page */
+            background: #111;
             color: #fff;
             text-align: center;
-            padding: 10px 0;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                align-items: center;
+                display: none;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+                cursor: pointer;
+                font-size: 1.5em;
+                margin: 10px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .services h2, .testimonials h2, .why-us h2 {
+                font-size: 2em;
+            }
+
+            .service-item, .testimonial-item, .why-us-item {
+                flex: 1 1 100%;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html" aria-label="Page d'accueil">
+                    <img src="assets/images/logo.ico" alt="Logo InnoTech - Services Informatiques">
+                </a>
+            </div>
             <nav>
+                <i class="fas fa-bars menu-toggle"></i>
                 <ul class="nav-menu">
                     <li><a href="index.html" aria-label="Accueil">Accueil</a></li>
                     <li><a href="pages/about.html" aria-label="À propos">À Propos</a></li>
                     <li><a href="pages/contact.html" aria-label="Contact">Contact</a></li>
                     <li><a href="pages/services.html" aria-label="Services">Services</a></li>
                 </ul>
-                <div class="logo">
-                    <a href="index.html" aria-label="Page d'accueil">
-                        <img src="assets/images/logo.ico" alt="Logo InnoTech - Services Informatiques">
-                    </a>
-                </div>
             </nav>
         </div>
-    </header>       
+    </header>
+
     <main>
         <section class="hero fade-in">
             <div class="container">
@@ -152,6 +365,7 @@
                 <a href="pages/contact.html" class="btn-main">Contactez-nous</a>
             </div>
         </section>
+
         <section class="services fade-in">
             <div class="container">
                 <h2>Nos Services</h2>
@@ -189,6 +403,7 @@
                 </div>
             </div>
         </section>
+
         <section class="testimonials fade-in">
             <div class="container">
                 <h2>Ce que disent nos clients</h2>
@@ -208,6 +423,7 @@
                 </div>
             </div>
         </section>
+
         <section class="why-us fade-in">
             <div class="container">
                 <h2>Pourquoi choisir InnoTech ?</h2>
@@ -231,11 +447,37 @@
             </div>
         </section>
     </main>
+
     <footer>
         <div class="container">
             <p>&copy; 2024 InnoTech - Services Informatiques. Tous droits réservés.</p>
         </div>
     </footer>
-    <script src="assets/js/animation.js" async></script>
+
+    <script>
+        // JavaScript for responsive menu
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+
+        // Animation on scroll
+        const fadeInSection = (section) => {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            section.forEach(section => observer.observe(section));
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.fade-in');
+            fadeInSection(sections);
+        });
+    </script>
 </body>
 </html>
