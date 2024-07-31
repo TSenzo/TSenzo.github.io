@@ -603,18 +603,28 @@
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
-        // Initialisation de la carte
-        const map = L.map('mapid').setView([43.6525, 1.0020], 13); // Coordonnées d'Auch, France
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialisation de la carte
+            const map = L.map('mapid').setView([43.6525, 1.0020], 13); // Coordonnées d'Auch, France
 
-        // Ajout du fond de carte OpenStreetMap
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+            // Ajout du fond de carte OpenStreetMap
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
 
-        // Ajout d'un marqueur
-        L.marker([43.6525, 1.0020]).addTo(map)
-            .bindPopup('<b>InnoTech</b><br>Notre bureau à Auch.')
-            .openPopup();
+            // Ajout d'un marqueur
+            L.marker([43.6525, 1.0020]).addTo(map)
+                .bindPopup('<b>InnoTech</b><br>Notre bureau à Auch.')
+                .openPopup();
+
+            // Script pour le menu interactif
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+
+            menuToggle.addEventListener('click', function () {
+                navMenu.classList.toggle('active');
+            });
+        });
     </script>
 </body>
 </html>
