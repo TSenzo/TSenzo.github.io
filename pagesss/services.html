@@ -20,10 +20,22 @@
             background: #000; /* Fond noir pour tout le site */
             color: #fff;
         }
+
         header {
-            background: #111; /* Noir très foncé pour l'en-tête */
-            padding: 10px 0;
+            background: rgba(17, 17, 17, 0.8); /* Noir transparent pour l'en-tête */
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            transition: background 0.3s ease-in-out;
         }
+
+        header.scrolled {
+            background: #111; /* Fond noir solide lors du défilement */
+        }
+
         .nav-menu {
             list-style: none;
             padding: 0;
@@ -32,41 +44,52 @@
             justify-content: space-between;
             align-items: center;
         }
+
         .nav-menu li {
             margin: 0 10px;
         }
+
         .nav-menu a {
             color: #f76c6c; /* Orange pour les liens de navigation */
             text-decoration: none;
             padding: 10px;
             transition: background 0.3s, color 0.3s;
         }
+
         .nav-menu a:hover {
             background: #f76c6c; /* Orange pour l'arrière-plan au survol */
             color: #fff; /* Texte blanc au survol */
             border-radius: 5px;
         }
+
         .menu-toggle {
             display: none; /* Masqué par défaut */
         }
+
         .logo img {
             max-width: 100px;
         }
+
         .services-header, .services-list {
             padding: 60px 0;
         }
+
         .services-header {
             background: #222; /* Fond sombre pour l'en-tête des services */
             text-align: center;
+            padding: 60px 0;
         }
+
         .services-header h1 {
             font-size: 2.5em;
             margin: 0;
             color: #f76c6c; /* Orange pour le titre principal */
         }
+
         .services-header p {
             font-size: 1.2em;
         }
+
         .service-item {
             background: #333; /* Fond sombre pour les éléments de service */
             padding: 20px;
@@ -74,17 +97,21 @@
             border-radius: 5px;
             text-align: center;
         }
+
         .service-item i {
             font-size: 2.5em;
             color: #f76c6c; /* Orange pour les icônes */
             margin-bottom: 10px;
         }
+
         .service-item h2 {
             color: #f76c6c; /* Orange pour les titres des services */
         }
+
         .service-item p {
             color: #fff;
         }
+
         .btn-main {
             display: inline-block;
             background: #f76c6c; /* Orange pour les boutons */
@@ -94,51 +121,68 @@
             border-radius: 5px;
             transition: background 0.3s;
         }
+
         .btn-main:hover {
             background: #d65a5a; /* Orange plus foncé au survol */
         }
+
         footer {
             background: #111; /* Noir très foncé pour le pied de page */
             text-align: center;
             padding: 20px 0;
         }
+
         footer p, .social-media a {
             color: #f76c6c; /* Orange pour le texte du pied de page et les icônes de réseaux sociaux */
         }
+
         .social-media a {
             margin: 0 10px;
             font-size: 1.5em;
             transition: color 0.3s;
         }
+
         .social-media a:hover {
             color: #fff; /* Blanc au survol */
         }
-        /* Pour les petits écrans */
+
         @media (max-width: 768px) {
             .nav-menu {
                 display: none;
                 flex-direction: column;
             }
+
             .menu-toggle {
                 display: block;
                 cursor: pointer;
                 color: #f76c6c;
                 font-size: 1.5em;
             }
+
             .nav-menu.active {
                 display: flex;
             }
+
             .nav-menu a {
                 padding: 15px;
                 text-align: center;
                 width: 100%;
             }
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .fade-in {
+            animation: fadeIn 1.5s ease-out;
+        }
     </style>
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <div class="container">
             <nav>
                 <div class="logo">
@@ -223,6 +267,16 @@
         // Fonctionnalité pour le menu mobile
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('.nav-menu').classList.toggle('active');
+        });
+
+        // Effet de défilement pour l'en-tête
+        window.addEventListener('scroll', function() {
+            var header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
         });
     </script>
 </body>

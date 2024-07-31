@@ -13,14 +13,16 @@
     <link rel="icon" href="assets/images/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
         /* Global Styles */
         body, html {
             margin: 0;
             padding: 0;
             font-family: 'Poppins', sans-serif;
-            color: #333;
-            background-color: #f5f5f5;
+            color: #fff;
+            background-color: #111;
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
@@ -46,7 +48,7 @@
         header {
             position: fixed;
             width: 100%;
-            background: rgba(0, 0, 0, 0.85);
+            background: #000;
             color: #fff;
             z-index: 1000;
             transition: background 0.3s;
@@ -67,7 +69,7 @@
         }
 
         .nav-menu a {
-            color: #f76c6c;
+            color: #f00;
             padding: 15px 0;
             display: inline-block;
             transition: color 0.3s;
@@ -118,7 +120,7 @@
 
         .btn-main {
             display: inline-block;
-            background: #f76c6c;
+            background: #f00;
             color: #fff;
             padding: 15px 30px;
             border-radius: 5px;
@@ -127,7 +129,7 @@
         }
 
         .btn-main:hover {
-            background: #d65a5a;
+            background: #d00;
             transform: translateY(-5px);
         }
 
@@ -157,15 +159,15 @@
         /* Services Section */
         .services {
             padding: 60px 0;
-            background: #f5f5f5;
-            color: #333;
+            background: #222;
+            color: #fff;
         }
 
         .services h2 {
             text-align: center;
             font-size: 2.5em;
             margin-bottom: 20px;
-            color: #f76c6c;
+            color: #f00;
         }
 
         .service-list {
@@ -177,7 +179,7 @@
 
         .service-item {
             flex: 1 1 300px;
-            background: #fff;
+            background: #333;
             padding: 20px;
             border-radius: 10px;
             text-align: center;
@@ -191,7 +193,7 @@
 
         .service-item i {
             font-size: 3em;
-            color: #f76c6c;
+            color: #f00;
             margin-bottom: 15px;
         }
 
@@ -207,7 +209,7 @@
         /* Testimonials Section */
         .testimonials {
             padding: 60px 0;
-            background: #444;
+            background: #000;
             color: #fff;
         }
 
@@ -215,7 +217,7 @@
             text-align: center;
             font-size: 2.5em;
             margin-bottom: 20px;
-            color: #f76c6c;
+            color: #f00;
         }
 
         .testimonial-list {
@@ -227,7 +229,7 @@
 
         .testimonial-item {
             flex: 1 1 300px;
-            background: #555;
+            background: #111;
             padding: 20px;
             border-radius: 10px;
             text-align: center;
@@ -242,21 +244,21 @@
         .testimonial-item h4 {
             font-size: 1.2em;
             margin-top: 15px;
-            color: #f76c6c;
+            color: #f00;
         }
 
         /* Why Us Section */
         .why-us {
             padding: 60px 0;
-            background: #f5f5f5;
-            color: #333;
+            background: #222;
+            color: #fff;
         }
 
         .why-us h2 {
             text-align: center;
             font-size: 2.5em;
             margin-bottom: 20px;
-            color: #f76c6c;
+            color: #f00;
         }
 
         .why-us-list {
@@ -268,7 +270,7 @@
 
         .why-us-item {
             flex: 1 1 300px;
-            background: #fff;
+            background: #333;
             padding: 20px;
             border-radius: 10px;
             text-align: center;
@@ -282,7 +284,7 @@
 
         .why-us-item i {
             font-size: 3em;
-            color: #f76c6c;
+            color: #f00;
             margin-bottom: 15px;
         }
 
@@ -295,165 +297,143 @@
             line-height: 1.6;
         }
 
-        /* Additional Sections */
-        .faq {
-            padding: 60px 0;
-            background: #444;
-            color: #fff;
-        }
-
-        .faq h2 {
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #f76c6c;
-        }
-
-        .faq-list {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            margin-bottom: 20px;
-        }
-
-        .faq-item h3 {
-            font-size: 1.5em;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #555;
-            padding: 15px;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-
-        .faq-item h3:hover {
-            background: #666;
-        }
-
-        .faq-item p {
-            display: none;
-            padding: 15px;
-            background: #333;
-            border-radius: 5px;
-            margin-top: 5px;
-        }
-
-        .faq-item.open p {
-            display: block;
-        }
-
         /* Contact Section */
         .contact {
             padding: 60px 0;
-            background: #f5f5f5;
-            color: #333;
+            background: #000;
+            color: #fff;
         }
 
         .contact h2 {
             text-align: center;
             font-size: 2.5em;
             margin-bottom: 20px;
-            color: #f76c6c;
+            color: #f00;
         }
 
-        .contact-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        .contact-info, .contact-form {
-            flex: 1 1 45%;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-info h3, .contact-form h3 {
-            font-size: 1.5em;
-            margin-bottom: 20px;
-            color: #f76c6c;
-        }
-
-        .contact-info p {
-            line-height: 1.6;
-        }
-
-        .contact-info a {
-            color: #f76c6c;
-            text-decoration: underline;
-        }
-
-        .contact-form form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .contact-form label {
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .contact-form input, .contact-form textarea {
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #333;
             border-radius: 5px;
-            font-size: 1em;
-        }
-
-        .contact-form button {
-            align-self: flex-start;
-            background: #f76c6c;
+            background: #222;
             color: #fff;
-            padding: 10px 20px;
+        }
+
+        .contact-form input[type="submit"] {
+            background: #f00;
             border: none;
-            border-radius: 5px;
+            color: #fff;
             cursor: pointer;
             transition: background 0.3s;
         }
 
-        .contact-form button:hover {
-            background: #d65a5a;
+        .contact-form input[type="submit"]:hover {
+            background: #d00;
+        }
+
+        /* Map Section */
+        .map {
+            padding: 60px 0;
+            background: #222;
+            color: #fff;
+        }
+
+        .map h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #f00;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 400px;
+            position: relative;
+        }
+
+        .map-container .leaflet-container {
+            width: 100%;
+            height: 100%;
         }
 
         /* Footer Styles */
         footer {
-            padding: 20px 0;
-            background: #333;
+            background: #111;
             color: #fff;
+            padding: 20px 0;
             text-align: center;
         }
 
-        footer p {
-            margin: 0;
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        /* Media Queries */
+        .footer-content p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer-content .social-links {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        .footer-content .social-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .footer-content .social-links a {
+            color: #f00;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+
+        .footer-content .social-links a:hover {
+            color: #fff;
+        }
+
+        .footer-content .footer-menu {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .footer-content .footer-menu li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .footer-content .footer-menu a {
+            color: #f00;
+            transition: color 0.3s;
+        }
+
+        .footer-content .footer-menu a:hover {
+            color: #fff;
+        }
+
+        /* Responsive Styles */
         @media (max-width: 768px) {
-            .service-item, .testimonial-item, .why-us-item {
-                flex: 1 1 100%;
-            }
-
-            .contact-info, .contact-form {
-                flex: 1 1 100%;
-            }
-
             .nav-menu {
                 display: none;
                 flex-direction: column;
+                background: #000;
                 position: absolute;
                 top: 60px;
-                right: 0;
-                background: rgba(0, 0, 0, 0.9);
+                left: 0;
                 width: 100%;
-                z-index: 999;
+                z-index: 1000;
             }
 
             .nav-menu.active {
@@ -464,203 +444,177 @@
                 display: block;
                 font-size: 1.5em;
                 cursor: pointer;
-                margin-right: 20px;
+            }
+
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .hero p {
+                font-size: 1em;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="container header-container">
             <div class="logo">
-                <a href="index.html" aria-label="Page d'accueil">
-                    <img src="assets/images/logo.ico" alt="Logo InnoTech - Services Informatiques">
-                </a>
+                <a href="#"><img src="assets/images/logo.png" alt="InnoTech Logo"></a>
             </div>
-            <nav>
-                <i class="fas fa-bars menu-toggle"></i>
-                <ul class="nav-menu">
-                    <li><a href="index.html" aria-label="Accueil">Accueil</a></li>
-                    <li><a href="pages/about.html" aria-label="À propos">À Propos</a></li>
-                    <li><a href="pages/services.html" aria-label="Services">Services</a></li>
-                    <li><a href="pages/contact.html" aria-label="Contact">Contact</a></li>
-                    <li><a href="pages/blog.html" aria-label="Blog">Blog</a></li>
-                    <li><a href="pages/faq.html" aria-label="FAQ">FAQ</a></li>
-                </ul>
-            </nav>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            <ul class="nav-menu">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Témoignages</a></li>
+                <li><a href="#why-us">Pourquoi nous</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#map">Carte</a></li>
+            </ul>
         </div>
     </header>
 
-    <main>
-        <section class="hero fade-in">
-            <div class="container">
-                <h1>Services Informatiques de Qualité</h1>
-                <p>Nous offrons une large gamme de services, de la réparation informatique au développement logiciel, en passant par l'administration réseau et la cybersécurité.</p>
-                <a href="pages/contact.html" class="btn-main">Contactez-nous</a>
-            </div>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div>
+            <h1>Bienvenue chez InnoTech</h1>
+            <p>Votre partenaire de confiance pour tous vos besoins informatiques</p>
+            <a href="#services" class="btn-main">Découvrez nos services</a>
+        </div>
+    </section>
 
-        <section class="services fade-in">
-            <div class="container">
-                <h2>Nos Services</h2>
-                <div class="service-list">
-                    <div class="service-item">
-                        <i class="fas fa-laptop-code"></i>
-                        <h3>Réparation Ordinateur</h3>
-                        <p>Diagnostic complet et réparation de matériel informatique pour tous types de dispositifs.</p>
-                    </div>
-                    <div class="service-item">
-                        <i class="fas fa-tools"></i>
-                        <h3>Assistance Logicielle</h3>
-                        <p>Résolution de problèmes logiciels, installation de systèmes d'exploitation, et optimisation des performances.</p>
-                    </div>
-                    <div class="service-item">
-                        <i class="fas fa-shield-alt"></i>
-                        <h3>Maintenance Préventive</h3>
-                        <p>Services réguliers de maintenance pour éviter les pannes et prolonger la durée de vie de vos équipements.</p>
-                    </div>
-                    <div class="service-item">
-                        <i class="fas fa-code"></i>
-                        <h3>Développement Logiciel</h3>
-                        <p>Développement d'applications personnalisées en utilisant des technologies modernes pour répondre à vos besoins spécifiques.</p>
-                    </div>
-                    <div class="service-item">
-                        <i class="fas fa-network-wired"></i>
-                        <h3>Administration Réseau</h3>
-                        <p>Configuration et gestion des réseaux informatiques, incluant la sécurité des données et la gestion des infrastructures réseau.</p>
-                    </div>
-                    <div class="service-item">
-                        <i class="fas fa-lock"></i>
-                        <h3>Cybersécurité</h3>
-                        <p>Protégez vos systèmes et données contre les cyberattaques grâce à nos solutions de sécurité informatique avancées.</p>
-                    </div>
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Nos Services</h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Réparation Informatique</h3>
+                    <p>Réparation rapide et efficace de tous vos équipements informatiques.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-code"></i>
+                    <h3>Développement Logiciel</h3>
+                    <p>Développement de solutions logicielles sur mesure adaptées à vos besoins.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Administration Réseau</h3>
+                    <p>Gestion et maintenance de vos réseaux informatiques pour une performance optimale.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Cybersécurité</h3>
+                    <p>Protection de vos données et systèmes contre les menaces cybernétiques.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="testimonials fade-in">
-            <div class="container">
-                <h2>Ce que disent nos clients</h2>
-                <div class="testimonial-list">
-                    <div class="testimonial-item">
-                        <p>"Service exceptionnel ! Mon ordinateur fonctionne comme neuf."</p>
-                        <h4>- Jean Dupont</h4>
-                    </div>
-                    <div class="testimonial-item">
-                        <p>"Assistance rapide et efficace. Je recommande vivement !"</p>
-                        <h4>- Marie Claire</h4>
-                    </div>
-                    <div class="testimonial-item">
-                        <p>"Professionnels et sympathiques. Très satisfait du service."</p>
-                        <h4>- Pierre Martin</h4>
-                    </div>
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>Ce que disent nos clients</h2>
+            <div class="testimonial-list">
+                <div class="testimonial-item">
+                    <p>"InnoTech a sauvé mon entreprise avec leur support informatique exceptionnel. Je recommande vivement!"</p>
+                    <h4>Jean Dupont</h4>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Un service rapide et professionnel. Ils ont développé une solution personnalisée qui répond parfaitement à nos besoins."</p>
+                    <h4>Marie Dubois</h4>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="why-us fade-in">
-            <div class="container">
-                <h2>Pourquoi choisir InnoTech ?</h2>
-                <div class="why-us-list">
-                    <div class="why-us-item">
-                        <i class="fas fa-clock"></i>
-                        <h3>Rapidité</h3>
-                        <p>Nos services sont rapides et efficaces, garantissant une intervention dans les plus brefs délais.</p>
-                    </div>
-                    <div class="why-us-item">
-                        <i class="fas fa-thumbs-up"></i>
-                        <h3>Fiabilité</h3>
-                        <p>Nos techniciens certifiés offrent des solutions durables et de haute qualité.</p>
-                    </div>
-                    <div class="why-us-item">
-                        <i class="fas fa-dollar-sign"></i>
-                        <h3>Prix Compétitifs</h3>
-                        <p>Nous offrons des services de qualité à des prix abordables pour tous nos clients.</p>
-                    </div>
-                    <div class="why-us-item">
-                        <i class="fas fa-star"></i>
-                        <h3>Service Client</h3>
-                        <p>Notre équipe est toujours disponible pour répondre à vos questions et vous aider avec vos besoins informatiques.</p>
-                    </div>
+    <!-- Why Us Section -->
+    <section class="why-us" id="why-us">
+        <div class="container">
+            <h2>Pourquoi nous choisir ?</h2>
+            <div class="why-us-list">
+                <div class="why-us-item">
+                    <i class="fas fa-star"></i>
+                    <h3>Expertise</h3>
+                    <p>Une équipe d'experts dans divers domaines informatiques, prêts à résoudre vos problèmes.</p>
+                </div>
+                <div class="why-us-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>Réactivité</h3>
+                    <p>Une intervention rapide pour minimiser les temps d'arrêt et maximiser votre productivité.</p>
+                </div>
+                <div class="why-us-item">
+                    <i class="fas fa-thumbs-up"></i>
+                    <h3>Fiabilité</h3>
+                    <p>Des solutions fiables et durables qui répondent à vos attentes.</p>
+                </div>
+                <div class="why-us-item">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>Tarifs Compétitifs</h3>
+                    <p>Des services de haute qualité à des prix abordables.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="faq fade-in">
-            <div class="container">
-                <h2>Questions Fréquemment Posées</h2>
-                <div class="faq-list">
-                    <div class="faq-item">
-                        <h3>Quel est le délai moyen de réparation ? <i class="fas fa-chevron-down"></i></h3>
-                        <p>Le délai de réparation dépend de la complexité du problème. En général, nous visons à compléter les réparations dans un délai de 1 à 3 jours ouvrables.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>Proposez-vous des services à domicile ? <i class="fas fa-chevron-down"></i></h3>
-                        <p>Oui, nous offrons des services à domicile pour les réparations d'ordinateurs et les installations de réseau. Contactez-nous pour plus de détails.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>Quels types de systèmes gérez-vous ? <i class="fas fa-chevron-down"></i></h3>
-                        <p>Nous travaillons avec tous les systèmes d'exploitation majeurs, y compris Windows, macOS, et diverses distributions Linux.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <form class="contact-form" action="mailto:contact@innotech.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Votre nom" required>
+                <input type="email" name="email" placeholder="Votre email" required>
+                <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+                <input type="submit" value="Envoyer">
+            </form>
+        </div>
+    </section>
 
-        <section class="contact fade-in">
-            <div class="container">
-                <h2>Contactez-nous</h2>
-                <div class="contact-container">
-                    <div class="contact-info">
-                        <h3>Nos coordonnées</h3>
-                        <p>Adresse: 123 Rue de l'Informatique, 75000 Paris, France</p>
-                        <p>Téléphone: +33 1 23 45 67 89</p>
-                        <p>Email: contact@innotech.com</p>
-                        <p>Suivez-nous sur nos réseaux sociaux pour les dernières mises à jour :</p>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    <div class="contact-form">
-                        <h3>Envoyez-nous un message</h3>
-                        <form action="form-submission.php" method="post">
-                            <label for="name">Nom</label>
-                            <input type="text" id="name" name="name" required>
+    <!-- Map Section -->
+    <section class="map" id="map">
+        <div class="container">
+            <h2>Nous Trouver</h2>
+            <div class="map-container" id="mapid"></div>
+        </div>
+    </section>
 
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="6" required></textarea>
-
-                            <button type="submit">Envoyer</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 InnoTech. Tous droits réservés.</p>
+        <div class="container footer-content">
+            <p>&copy; 2024 InnoTech. Tous droits réservés.</p>
+            <ul class="social-links">
+                <li><a href="https://facebook.com/innotech" target="_blank" class="fab fa-facebook-f"></a></li>
+                <li><a href="https://twitter.com/innotech" target="_blank" class="fab fa-twitter"></a></li>
+                <li><a href="https://linkedin.com/company/innotech" target="_blank" class="fab fa-linkedin-in"></a></li>
+            </ul>
+            <ul class="footer-menu">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Témoignages</a></li>
+                <li><a href="#why-us">Pourquoi nous</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#map">Carte</a></li>
+            </ul>
+        </div>
     </footer>
 
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
-        // Menu Toggle
-        document.querySelector('.menu-toggle').addEventListener('click', () => {
-            document.querySelector('.nav-menu').classList.toggle('active');
-        });
+        // Initialisation de la carte
+        const map = L.map('mapid').setView([43.6525, 1.0020], 13); // Coordonnées d'Auch, France
 
-        // FAQ Toggle
-        const faqItems = document.querySelectorAll('.faq-item');
-        faqItems.forEach(item => {
-            item.querySelector('h3').addEventListener('click', () => {
-                item.classList.toggle('open');
-                const icon = item.querySelector('i');
-                icon.classList.toggle('fa-chevron-down');
-                icon.classList.toggle('fa-chevron-up');
-            });
-        });
+        // Ajout du fond de carte OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Ajout d'un marqueur
+        L.marker([43.6525, 1.0020]).addTo(map)
+            .bindPopup('<b>InnoTech</b><br>Notre bureau à Auch.')
+            .openPopup();
     </script>
 </body>
 </html>

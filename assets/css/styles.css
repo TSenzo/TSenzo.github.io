@@ -1,12 +1,12 @@
 /* Variables CSS */
 :root {
-    --primary-color: #ff5722;
-    --secondary-color: #333;
-    --background-color: #f4f4f4;
-    --text-color: #333;
-    --card-background: #fff;
-    --shadow-color: rgba(0, 0, 0, 0.2);
-    --shadow-hover: rgba(0, 0, 0, 0.3);
+    --primary-color: #e10600; /* Rouge vif */
+    --secondary-color: #000; /* Noir */
+    --background-color: #000; /* Noir pour l'arrière-plan */
+    --text-color: #fff; /* Blanc pour le texte */
+    --card-background: #111; /* Noir très foncé pour les cartes */
+    --shadow-color: rgba(0, 0, 0, 0.5); /* Ombre noire pour les cartes */
+    --shadow-hover: rgba(0, 0, 0, 0.7); /* Ombre noire plus sombre au survol */
     --font-family: 'Arial', sans-serif;
     --font-size: 16px;
 }
@@ -32,7 +32,7 @@ body {
 /* En-tête */
 header {
     background-color: var(--secondary-color);
-    color: #fff;
+    color: var(--text-color);
     padding: 10px 0;
 }
 
@@ -55,7 +55,7 @@ nav .nav-menu li {
 }
 
 nav .nav-menu li a {
-    color: #fff;
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;
 }
@@ -76,7 +76,7 @@ nav .logo img {
 .menu-toggle {
     display: none;
     font-size: 1.5rem;
-    color: #fff;
+    color: var(--primary-color);
 }
 
 .menu-toggle:hover {
@@ -87,7 +87,7 @@ nav .logo img {
 .hero {
     position: relative;
     background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
-    color: #fff;
+    color: var(--text-color);
     text-align: center;
     padding: 100px 20px;
     margin-bottom: 20px;
@@ -126,7 +126,7 @@ nav .logo img {
 
 .btn-main {
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--text-color);
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -191,7 +191,7 @@ nav .logo img {
 /* Témoignages */
 .testimonials {
     padding: 60px 0;
-    background-color: var(--background-color);
+    background-color: var(--card-background);
     text-align: center;
 }
 
@@ -209,7 +209,7 @@ nav .logo img {
 }
 
 .testimonial-item {
-    background-color: var(--card-background);
+    background-color: var(--background-color);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 10px 20px var(--shadow-color);
@@ -286,7 +286,7 @@ nav .logo img {
 /* Pied de page */
 footer {
     background-color: var(--secondary-color);
-    color: #fff;
+    color: var(--text-color);
     text-align: center;
     padding: 10px 0;
 }
@@ -377,67 +377,21 @@ footer {
         font-size: 1rem; /* Réduire la taille du texte */
     }
 
-    .btn-main {
-        padding: 0.5rem 1rem; /* Réduire le padding du bouton */
-        font-size: 1rem; /* Ajuster la taille de la police du bouton */
-    }
-
     /* Services */
     .service-item {
-        width: 100%; /* Les éléments de service occupent toute la largeur */
-        box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur totale */
-    }
-
-    .service-item i {
-        font-size: 2rem; /* Réduire la taille des icônes */
-    }
-
-    .service-item h3 {
-        font-size: 1.25rem; /* Ajuster la taille du titre des services */
+        width: 100%; /* Les éléments de service prennent toute la largeur sur petits écrans */
+        margin: 10px 0;
     }
 
     /* Témoignages */
     .testimonial-item {
-        width: 100%; /* Les éléments de témoignage occupent toute la largeur */
+        width: 100%; /* Les éléments de témoignages prennent toute la largeur sur petits écrans */
+        margin: 10px 0;
     }
 
     /* Pourquoi Nous */
     .why-us-item {
-        width: 100%; /* Les éléments de "Pourquoi nous" occupent toute la largeur */
-    }
-
-    .why-us-item i {
-        font-size: 2rem; /* Réduire la taille des icônes */
-    }
-
-    .why-us-item h3 {
-        font-size: 1.25rem; /* Ajuster la taille du titre */
-    }
-}
-
-/* Pour les très petits écrans (moins de 480px) */
-@media (max-width: 480px) {
-
-    /* En-tête */
-    .menu-toggle {
-        font-size: 1.2rem; /* Ajuster la taille du bouton de menu hamburger */
-    }
-
-    /* Section Héros */
-    .hero {
-        padding: 4rem 0.5rem; /* Ajuster le padding pour les très petits écrans */
-    }
-
-    .hero h1 {
-        font-size: 2rem; /* Réduire davantage la taille du titre */
-    }
-
-    .hero p {
-        font-size: 0.9rem; /* Réduire la taille du texte */
-    }
-
-    .btn-main {
-        padding: 0.4rem 0.8rem; /* Réduire le padding du bouton */
-        font-size: 0.9rem; /* Ajuster la taille de la police du bouton */
+        width: 100%; /* Les éléments de "Pourquoi Nous" prennent toute la largeur sur petits écrans */
+        margin: 10px 0;
     }
 }
