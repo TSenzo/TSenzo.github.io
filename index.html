@@ -11,8 +11,8 @@
     <meta property="og:url" content="https://www.innotech.com">
     <title>InnoTech - Services Informatiques Complets</title>
     <link rel="icon" href="assets/images/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <style>
         /* Global Styles */
         body, html {
@@ -20,7 +20,7 @@
             padding: 0;
             font-family: 'Poppins', sans-serif;
             color: #333;
-            background-color: #000;
+            background-color: #f5f5f5;
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
@@ -157,8 +157,8 @@
         /* Services Section */
         .services {
             padding: 60px 0;
-            background: #222;
-            color: #fff;
+            background: #f5f5f5;
+            color: #333;
         }
 
         .services h2 {
@@ -177,7 +177,7 @@
 
         .service-item {
             flex: 1 1 300px;
-            background: #333;
+            background: #fff;
             padding: 20px;
             border-radius: 10px;
             text-align: center;
@@ -198,6 +198,10 @@
         .service-item h3 {
             font-size: 1.5em;
             margin-bottom: 10px;
+        }
+
+        .service-item p {
+            line-height: 1.6;
         }
 
         /* Testimonials Section */
@@ -230,6 +234,11 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
+        .testimonial-item p {
+            font-style: italic;
+            line-height: 1.6;
+        }
+
         .testimonial-item h4 {
             font-size: 1.2em;
             margin-top: 15px;
@@ -239,8 +248,8 @@
         /* Why Us Section */
         .why-us {
             padding: 60px 0;
-            background: #222;
-            color: #fff;
+            background: #f5f5f5;
+            color: #333;
         }
 
         .why-us h2 {
@@ -259,7 +268,7 @@
 
         .why-us-item {
             flex: 1 1 300px;
-            background: #333;
+            background: #fff;
             padding: 20px;
             border-radius: 10px;
             text-align: center;
@@ -282,29 +291,169 @@
             margin-bottom: 10px;
         }
 
-        /* Footer */
+        .why-us-item p {
+            line-height: 1.6;
+        }
+
+        /* Additional Sections */
+        .faq {
+            padding: 60px 0;
+            background: #444;
+            color: #fff;
+        }
+
+        .faq h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #f76c6c;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-item h3 {
+            font-size: 1.5em;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #555;
+            padding: 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .faq-item h3:hover {
+            background: #666;
+        }
+
+        .faq-item p {
+            display: none;
+            padding: 15px;
+            background: #333;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        .faq-item.open p {
+            display: block;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 60px 0;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        .contact h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #f76c6c;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .contact-info, .contact-form {
+            flex: 1 1 45%;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info h3, .contact-form h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #f76c6c;
+        }
+
+        .contact-info p {
+            line-height: 1.6;
+        }
+
+        .contact-info a {
+            color: #f76c6c;
+            text-decoration: underline;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .contact-form button {
+            align-self: flex-start;
+            background: #f76c6c;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #d65a5a;
+        }
+
+        /* Footer Styles */
         footer {
-            background: #111;
+            padding: 20px 0;
+            background: #333;
             color: #fff;
             text-align: center;
-            padding: 20px 0;
         }
 
         footer p {
             margin: 0;
         }
 
-        /* Responsive Design */
+        /* Media Queries */
         @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                align-items: center;
+            .service-item, .testimonial-item, .why-us-item {
+                flex: 1 1 100%;
+            }
+
+            .contact-info, .contact-form {
+                flex: 1 1 100%;
             }
 
             .nav-menu {
-                flex-direction: column;
-                align-items: center;
                 display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: rgba(0, 0, 0, 0.9);
+                width: 100%;
+                z-index: 999;
             }
 
             .nav-menu.active {
@@ -313,26 +462,9 @@
 
             .menu-toggle {
                 display: block;
-                cursor: pointer;
                 font-size: 1.5em;
-                margin: 10px 0;
-            }
-
-            .hero h1 {
-                font-size: 2.5em;
-            }
-
-            .hero p {
-                font-size: 1em;
-            }
-
-            .services h2, .testimonials h2, .why-us h2 {
-                font-size: 2em;
-            }
-
-            .service-item, .testimonial-item, .why-us-item {
-                flex: 1 1 100%;
-                margin-bottom: 20px;
+                cursor: pointer;
+                margin-right: 20px;
             }
         }
     </style>
@@ -350,8 +482,10 @@
                 <ul class="nav-menu">
                     <li><a href="index.html" aria-label="Accueil">Accueil</a></li>
                     <li><a href="pages/about.html" aria-label="À propos">À Propos</a></li>
-                    <li><a href="pages/contact.html" aria-label="Contact">Contact</a></li>
                     <li><a href="pages/services.html" aria-label="Services">Services</a></li>
+                    <li><a href="pages/contact.html" aria-label="Contact">Contact</a></li>
+                    <li><a href="pages/blog.html" aria-label="Blog">Blog</a></li>
+                    <li><a href="pages/faq.html" aria-label="FAQ">FAQ</a></li>
                 </ul>
             </nav>
         </div>
@@ -443,40 +577,89 @@
                         <h3>Prix Compétitifs</h3>
                         <p>Nous offrons des services de qualité à des prix abordables pour tous nos clients.</p>
                     </div>
+                    <div class="why-us-item">
+                        <i class="fas fa-star"></i>
+                        <h3>Service Client</h3>
+                        <p>Notre équipe est toujours disponible pour répondre à vos questions et vous aider avec vos besoins informatiques.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq fade-in">
+            <div class="container">
+                <h2>Questions Fréquemment Posées</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>Quel est le délai moyen de réparation ? <i class="fas fa-chevron-down"></i></h3>
+                        <p>Le délai de réparation dépend de la complexité du problème. En général, nous visons à compléter les réparations dans un délai de 1 à 3 jours ouvrables.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Proposez-vous des services à domicile ? <i class="fas fa-chevron-down"></i></h3>
+                        <p>Oui, nous offrons des services à domicile pour les réparations d'ordinateurs et les installations de réseau. Contactez-nous pour plus de détails.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Quels types de systèmes gérez-vous ? <i class="fas fa-chevron-down"></i></h3>
+                        <p>Nous travaillons avec tous les systèmes d'exploitation majeurs, y compris Windows, macOS, et diverses distributions Linux.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact fade-in">
+            <div class="container">
+                <h2>Contactez-nous</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Nos coordonnées</h3>
+                        <p>Adresse: 123 Rue de l'Informatique, 75000 Paris, France</p>
+                        <p>Téléphone: +33 1 23 45 67 89</p>
+                        <p>Email: contact@innotech.com</p>
+                        <p>Suivez-nous sur nos réseaux sociaux pour les dernières mises à jour :</p>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Envoyez-nous un message</h3>
+                        <form action="form-submission.php" method="post">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" name="name" required>
+
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+
+                            <button type="submit">Envoyer</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 InnoTech - Services Informatiques. Tous droits réservés.</p>
-        </div>
+        <p>&copy; 2024 InnoTech. Tous droits réservés.</p>
     </footer>
 
     <script>
-        // JavaScript for responsive menu
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
+        // Menu Toggle
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
             document.querySelector('.nav-menu').classList.toggle('active');
         });
 
-        // Animation on scroll
-        const fadeInSection = (section) => {
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.3 });
-
-            section.forEach(section => observer.observe(section));
-        };
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const sections = document.querySelectorAll('.fade-in');
-            fadeInSection(sections);
+        // FAQ Toggle
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            item.querySelector('h3').addEventListener('click', () => {
+                item.classList.toggle('open');
+                const icon = item.querySelector('i');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
         });
     </script>
 </body>
